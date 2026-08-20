@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-08-20T13:30:00.000Z",
-  "beijingTime": "2026-08-20 21:30",
-  "status": "verified-snapshot",
+  "generatedAt": "2026-08-20T16:10:52.498Z",
+  "beijingTime": "2026-08-21 00:11",
+  "status": "official-direct",
   "source": {
-    "name": "全国碳市场行情汇总",
-    "url": "https://www.ccn.ac.cn/cets",
-    "provenance": "交易所行情转引"
+    "name": "全国碳市场公开交易系统",
+    "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
+    "provenance": "官方直接采集"
   },
   "cea": {
     "tradeDate": "2026-08-20",
     "close": 97.81,
     "changePct": 0.42,
+    "open": 97.4,
+    "high": 98,
+    "low": 97.4,
+    "volume": "99.74万吨",
+    "turnover": "9,687.10万元",
     "unit": "元/吨"
   },
   "ccer": {
     "tradeDate": "2026-08-20",
     "average": 94.83,
-    "changePct": 1.38,
     "volumeTco2e": 352877,
+    "changePct": 1.38,
     "unit": "元/吨"
   }
 }

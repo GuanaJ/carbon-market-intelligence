@@ -1,0 +1,13 @@
+[
+  {
+    "generatedAt": "2026-08-20T16:10:52.498Z",
+    "beijingTime": "2026-08-21 00:11",
+    "status": "complete",
+    "moduleCount": 9,
+    "publicModuleCount": 8,
+    "protectedModuleCount": 1,
+    "sourceChecks": 15,
+    "successCount": 15,
+    "failedCount": 0
+  }
+]
