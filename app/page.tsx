@@ -10,7 +10,7 @@ import {
   Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Pie, PieChart,
   ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from "recharts";
-import { greenCertificateTrend, moduleDatasets, sourceStatus, trendSeries } from "../lib/platform-data";
+import { greenCertificateTrend, moduleDatasets, sourceStatus, trendSeries, type ModuleDataset, type ModuleMetric, type ModuleRecord, type TrendPoint } from "../lib/platform-data";
 
 const modules = [
   { icon: TrendingUp, title: "市场行情数据库" },
@@ -33,11 +33,22 @@ const industryShare = [
 const COLORS = ["#2563eb", "#0d9488", "#f59e0b", "#8b5cf6"];
 
 type LiveMarketSnapshot = {
-  beijingTime: string;
-  status: string;
-  source: { name: string; url: string; provenance: string };
+  beijingTime?: string;
+  status?: string;
+  source?: { name: string; url: string; provenance: string };
   cea: { tradeDate: string; close: number; changePct?: number; unit: string };
   ccer: { tradeDate: string; average: number; changePct?: number; volumeTco2e?: number; unit: string };
+};
+
+type LiveSource = { code: string; name: string; type: string; url: string; status: string; provenance: string; fetchedAt: string; records: number };
+type LiveModule = { status: string; metrics: Record<string, Omit<ModuleMetric, "name">>; records: ModuleRecord[] };
+type LivePlatformSnapshot = {
+  beijingTime: string;
+  status: string;
+  collection: { moduleCount: number; sourceChecks: number; successCount: number; failedCount: number; protectedModuleCount: number };
+  market: Pick<LiveMarketSnapshot, "cea" | "ccer"> & { trend?: Record<string, TrendPoint[]> };
+  modules: Record<string, LiveModule>;
+  sources: LiveSource[];
 };
 
 function BrandMark() {
@@ -57,19 +68,39 @@ export default function Home() {
   const [sourceOpen, setSourceOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [liveMarket, setLiveMarket] = useState<LiveMarketSnapshot | null>(null);
+  const [livePlatform, setLivePlatform] = useState<LivePlatformSnapshot | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch(new URL("data/latest-market.json", document.baseURI), { signal: controller.signal })
-      .then((response) => response.ok ? response.json() : Promise.reject())
-      .then((snapshot: LiveMarketSnapshot) => setLiveMarket(snapshot))
-      .catch(() => undefined);
+    Promise.allSettled([
+      fetch(new URL("data/platform-snapshot.json", document.baseURI), { signal: controller.signal }).then((response) => response.ok ? response.json() : Promise.reject()),
+      fetch(new URL("data/latest-market.json", document.baseURI), { signal: controller.signal }).then((response) => response.ok ? response.json() : Promise.reject()),
+    ]).then(([platform, market]) => {
+      if (platform.status === "fulfilled") {
+        const snapshot = platform.value as LivePlatformSnapshot;
+        setLivePlatform(snapshot);
+        setLiveMarket(snapshot.market);
+      } else if (market.status === "fulfilled") setLiveMarket(market.value as LiveMarketSnapshot);
+    }).catch(() => undefined);
     return () => controller.abort();
   }, []);
 
-  const activeDataset = activeModule === "总览" ? null : moduleDatasets[activeModule];
+  const runtimeDatasets = useMemo<Record<string, ModuleDataset>>(() => Object.fromEntries(
+    Object.entries(moduleDatasets).map(([name, base]) => {
+      const live = livePlatform?.modules?.[name];
+      if (!live) return [name, base];
+      return [name, {
+        ...base,
+        metrics: base.metrics.map((item) => ({ ...item, ...(live.metrics?.[item.name] ?? {}) })),
+        records: live.records?.length ? live.records : base.records,
+      }];
+    }),
+  ), [livePlatform]);
+  const activeDataset = activeModule === "总览" ? null : runtimeDatasets[activeModule];
   const selectedMetric = activeDataset?.metrics.find((item) => item.name === activeSubmodule) ?? activeDataset?.metrics[0];
   const currentTrend = useMemo(() => {
+    const liveTrend = livePlatform?.market?.trend?.[period];
+    if (liveTrend?.length) return liveTrend;
     const base = trendSeries[period];
     if (!liveMarket?.cea?.tradeDate || !liveMarket.cea.close) return base;
     const date = period === "近1年"
@@ -77,18 +108,18 @@ export default function Home() {
       : liveMarket.cea.tradeDate.slice(5).replace("-", "/");
     const next = base.filter((item) => item.date !== date);
     return [...next, { date, cea: liveMarket.cea.close, ccer: liveMarket.ccer?.average }];
-  }, [liveMarket, period]);
-  const dataTime = liveMarket?.beijingTime ?? "2026-08-20 21:30";
+  }, [liveMarket, livePlatform, period]);
+  const dataTime = livePlatform?.beijingTime ?? liveMarket?.beijingTime ?? "2026-08-20 21:30";
   const marketDate = liveMarket?.cea?.tradeDate ?? "2026-08-20";
   const visibleRecords = useMemo(() => {
-    const records = activeDataset?.records ?? moduleDatasets["政策与市场事件"].records;
+    const records = activeDataset?.records ?? runtimeDatasets["政策与市场事件"].records;
     if (!query.trim()) return records;
     return records.filter((record) => `${record.title}${record.source}${record.tag}`.toLowerCase().includes(query.toLowerCase()));
-  }, [activeDataset, query]);
+  }, [activeDataset, query, runtimeDatasets]);
 
   function selectModule(title: string) {
     setActiveModule(title);
-    setActiveSubmodule(moduleDatasets[title]?.metrics[0]?.name ?? "");
+    setActiveSubmodule(runtimeDatasets[title]?.metrics[0]?.name ?? "");
     setMenuOpen(false);
   }
 
@@ -107,7 +138,7 @@ export default function Home() {
           <button onClick={() => setSourceOpen(true)}><Database size={18} /><span>数据源与采集</span></button>
           <button onClick={() => selectModule("碳价外部影响因素")}><Settings2 size={18} /><span>指标与预警设置</span></button>
         </nav>
-        <div className="sync-card"><div><span className="pulse" /><strong>本次采集已完成</strong></div><p>采集时间：{dataTime}</p><button onClick={() => setSourceOpen(true)}>查看采集明细 <ExternalLink size={13} /></button></div>
+        <div className="sync-card"><div><span className="pulse" /><strong>{livePlatform?.status === "partial" ? "本次采集部分完成" : "本次采集已完成"}</strong></div><p>采集时间：{dataTime}</p><button onClick={() => setSourceOpen(true)}>查看采集明细 <ExternalLink size={13} /></button></div>
       </aside>
 
       <div className="main-wrap">
@@ -123,10 +154,10 @@ export default function Home() {
             <div className="heading-actions"><button className="ghost"><RefreshCw size={15} />最近采集 {dataTime.slice(11)}</button><button className="primary" onClick={() => setSourceOpen(true)}><ShieldCheck size={16} />数据血缘</button></div>
           </section>
 
-          <div className="notice"><CheckCircle2 size={16} /><span><strong>实时采集已写入</strong> · 最新行情日为{marketDate}；交易所直连受限的数据已标注“转引”，未用推算值填补。</span><button onClick={() => setSourceOpen(true)}>查看明细</button></div>
+          <div className="notice"><CheckCircle2 size={16} /><span><strong>全模块实时快照已写入</strong> · 最新行情日为{marketDate}；已完成{livePlatform?.collection?.successCount ?? "—"}/{livePlatform?.collection?.sourceChecks ?? "—"}项来源检查，失败来源不会覆盖最后成功数据。</span><button onClick={() => setSourceOpen(true)}>查看明细</button></div>
 
           {activeModule === "总览" ? (
-            <Overview period={period} setPeriod={setPeriod} currentTrend={currentTrend} query={query} records={visibleRecords} onOpenSources={() => setSourceOpen(true)} liveMarket={liveMarket} />
+            <Overview period={period} setPeriod={setPeriod} currentTrend={currentTrend} query={query} records={visibleRecords} onOpenSources={() => setSourceOpen(true)} liveMarket={liveMarket} livePlatform={livePlatform} />
           ) : activeDataset && selectedMetric ? (
             <section className="module-view">
               <div className="submodule-strip">
@@ -154,21 +185,24 @@ export default function Home() {
         </main>
       </div>
 
-      {sourceOpen && <SourceDrawer onClose={() => setSourceOpen(false)} />}
+      {sourceOpen && <SourceDrawer onClose={() => setSourceOpen(false)} snapshot={livePlatform} dataTime={dataTime} />}
     </div>
   );
 }
 
-function Overview({ period, setPeriod, currentTrend, records, onOpenSources, liveMarket }: { period: string; setPeriod: (value: string) => void; currentTrend: typeof trendSeries[string]; query: string; records: typeof moduleDatasets[string]["records"]; onOpenSources: () => void; liveMarket: LiveMarketSnapshot | null }) {
+function Overview({ period, setPeriod, currentTrend, records, onOpenSources, liveMarket, livePlatform }: { period: string; setPeriod: (value: string) => void; currentTrend: TrendPoint[]; query: string; records: ModuleRecord[]; onOpenSources: () => void; liveMarket: LiveMarketSnapshot | null; livePlatform: LivePlatformSnapshot | null }) {
   const cea = liveMarket?.cea;
   const ccer = liveMarket?.ccer;
+  const greenTrade = livePlatform?.modules?.["绿电绿证数据库"]?.metrics?.["绿证交易量"];
+  const external = livePlatform?.modules?.["碳价外部影响因素"]?.metrics;
+  const collection = livePlatform?.collection;
   const displayDate = (cea?.tradeDate ?? "2026-08-20").slice(5).replace("-", "月") + "日";
   return <>
     <section className="metric-grid" aria-label="核心市场指标">
       <article className="metric-card featured"><div className="metric-top"><span>全国碳配额 CEA</span><TrendingUp size={18} /></div><div className="metric-main"><strong>{(cea?.close ?? 97.81).toFixed(2)}</strong><small>元 / 吨</small></div><div className="metric-bottom"><span className="delta up"><ArrowUpRight size={14} />{(cea?.changePct ?? 0.42).toFixed(2)}%</span><span>{displayDate}收盘</span></div></article>
       <article className="metric-card"><div className="metric-top"><span>全国 CCER</span><Leaf size={18} /></div><div className="metric-main"><strong>{(ccer?.average ?? 94.83).toFixed(2)}</strong><small>元 / 吨</small></div><div className="metric-bottom"><span className="delta up"><ArrowUpRight size={14} />{(ccer?.changePct ?? 1.38).toFixed(2)}%</span><span>{displayDate}均价</span></div></article>
-      <article className="metric-card"><div className="metric-top"><span>当日 CCER 成交量</span><Activity size={18} /></div><div className="metric-main"><strong>{((ccer?.volumeTco2e ?? 352877) / 10000).toFixed(2)}</strong><small>万吨</small></div><div className="metric-bottom"><span className="quality-badge">转引</span><span>北京绿色交易所</span></div></article>
-      <article className="metric-card"><div className="metric-top"><span>6月绿证交易</span><Zap size={18} /></div><div className="metric-main"><strong>8,273</strong><small>万个</small></div><div className="metric-bottom"><span className="quality-badge official">官方</span><span>国家能源局</span></div></article>
+      <article className="metric-card"><div className="metric-top"><span>当日 CCER 成交量</span><Activity size={18} /></div><div className="metric-main"><strong>{((ccer?.volumeTco2e ?? 352877) / 10000).toFixed(2)}</strong><small>万吨</small></div><div className="metric-bottom"><span className="quality-badge official">官方直采</span><span>全国CCER交易系统</span></div></article>
+      <article className="metric-card"><div className="metric-top"><span>最近月度绿证交易</span><Zap size={18} /></div><div className="metric-main"><strong>{greenTrade?.value ?? "8,273"}</strong><small>{greenTrade?.unit ?? "万个"}</small></div><div className="metric-bottom"><span className="quality-badge official">官方</span><span>国家能源局</span></div></article>
     </section>
 
     <section className="chart-grid">
@@ -178,10 +212,10 @@ function Overview({ period, setPeriod, currentTrend, records, onOpenSources, liv
 
     <section className="overview-lower">
       <RecordsPanel title="最新政策与市场事件" records={records} emptyText="没有符合搜索条件的记录" />
-      <article className="panel coverage-panel"><div className="panel-head"><div><h2>本次采集覆盖</h2><p>已写入数据库的数据主题</p></div><button className="text-button" onClick={onOpenSources}>查看来源 <ExternalLink size={13} /></button></div><div className="coverage-list"><div><strong>20</strong><span>行情时间点</span></div><div><strong>6</strong><span>绿证月份</span></div><div><strong>10</strong><span>政策与事件</span></div><div><strong>9</strong><span>业务主题</span></div></div><div className="coverage-note"><ShieldCheck size={18} /><p>客户碳资产仅保留数据结构，未授权前不从公开网页推断企业持仓。</p></div></article>
+      <article className="panel coverage-panel"><div className="panel-head"><div><h2>本次采集覆盖</h2><p>已写入全模块实时快照</p></div><button className="text-button" onClick={onOpenSources}>查看来源 <ExternalLink size={13} /></button></div><div className="coverage-list"><div><strong>{currentTrend.length}</strong><span>当前图表时间点</span></div><div><strong>{collection?.successCount ?? 5}</strong><span>成功来源检查</span></div><div><strong>{records.length}</strong><span>政策与事件</span></div><div><strong>{collection?.moduleCount ?? 9}</strong><span>业务模块</span></div></div><div className="coverage-note"><ShieldCheck size={18} /><p>客户碳资产仅保留数据结构，未授权前不从公开网页推断企业持仓。</p></div></article>
     </section>
 
-    <section className="chart-grid compact"><GreenChart /><article className="panel signal-panel"><div className="panel-head"><div><h2>外部影响信号</h2><p>当前已接入指标</p></div><Globe2 size={20} className="panel-icon" /></div><div className="signal-list"><div><span>电力市场交易量</span><strong>+24.2%</strong><div className="signal-line"><i style={{width:"78%"}} /></div></div><div><span>绿电交易量</span><strong>1,641亿kWh</strong><div className="signal-line"><i style={{width:"64%"}} /></div></div><div><span>CEA—CCER价差</span><strong>2.98元</strong><div className="signal-line"><i style={{width:"48%"}} /></div></div><div><span>EUA Dec-26</span><strong>79–87欧元</strong><div className="signal-line"><i style={{width:"70%"}} /></div></div></div></article></section>
+    <section className="chart-grid compact"><GreenChart /><article className="panel signal-panel"><div className="panel-head"><div><h2>外部影响信号</h2><p>本次采集实时状态</p></div><Globe2 size={20} className="panel-icon" /></div><div className="signal-list"><div><span>北京代表点气象</span><strong>{external?.["气温与降水"]?.value ?? "逐日采集"}</strong><div className="signal-line"><i style={{width:"78%"}} /></div></div><div><span>欧洲央行参考汇率</span><strong>{external?.["宏观指标"]?.value ?? "—"}</strong><div className="signal-line"><i style={{width:"64%"}} /></div></div><div><span>CEA—CCER价差</span><strong>{cea?.close && ccer?.average ? (cea.close - ccer.average).toFixed(2) : "—"}元</strong><div className="signal-line"><i style={{width:"48%"}} /></div></div><div><span>EUA联动</span><strong>{external?.["EUA联动"]?.value ?? "待授权行情"}</strong><div className="signal-line"><i style={{width:"34%"}} /></div></div></div></article></section>
   </>;
 }
 
@@ -200,6 +234,8 @@ function RecordsPanel({ title, records, emptyText }: { title: string; records: t
   return <article className="panel records-panel"><div className="panel-head"><div><h2>{title}</h2><p>点击来源可返回原始发布页面</p></div><span className="result-count">{records.length} 条</span></div>{records.length ? <div className="data-table"><div className="data-row data-th"><span>日期</span><span>数据 / 事件</span><span>关键值</span><span>来源</span></div>{records.map((record) => <div className="data-row" key={`${record.date}-${record.title}`}><span>{record.date}</span><span><em>{record.tag}</em><strong>{record.title}</strong></span><span>{record.value}</span><SourceLink url={record.url}>{record.source}</SourceLink></div>)}</div> : <div className="empty-state">{emptyText}</div>}</article>;
 }
 
-function SourceDrawer({ onClose }: { onClose: () => void }) {
-  return <div className="modal-backdrop" onMouseDown={onClose}><section className="source-drawer" onMouseDown={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label="数据源与采集状态"><div className="drawer-head"><div><span className="drawer-icon"><Database /></span><div><h2>本次采集与数据血缘</h2><p>采集时间：2026-08-20 21:30 CST</p></div></div><button onClick={onClose} aria-label="关闭"><X /></button></div><div className="schedule-card"><CalendarClock /><div><strong>每日自动采集</strong><span>北京时间17:30；失败不覆盖最后成功数据</span></div><em>已启用</em></div><div className="source-summary"><div><strong>20</strong><span>行情时间点</span></div><div><strong>5</strong><span>本次成功来源</span></div><div><strong>2</strong><span>受限/扩展中</span></div></div><div className="source-table"><div className="source-row source-th"><span>来源</span><span>数据类型</span><span>状态</span><span>更新时间</span></div>{sourceStatus.map((source) => <a className="source-row" href={source.url} target="_blank" rel="noreferrer" key={source.name}><strong>{source.name}</strong><span>{source.type}</span><span className={`source-status ${source.status !== "成功" ? "limited" : ""}`}><i />{source.status}</span><span>{source.updated}<ExternalLink size={12}/></span></a>)}</div><div className="trace-note"><ShieldCheck /><div><strong>质量规则</strong><p>每条数据保存来源链接、来源机构、发布日期、采集时间和解析口径。直接访问受限时使用明确标注的权威转引；无法核验的数据保持空值。</p></div></div></section></div>;
+function SourceDrawer({ onClose, snapshot, dataTime }: { onClose: () => void; snapshot: LivePlatformSnapshot | null; dataTime: string }) {
+  const sources = snapshot?.sources ?? sourceStatus.map((source, index) => ({ code: `fallback-${index}`, ...source, fetchedAt: source.updated, records: 0, provenance: "历史快照" }));
+  const summary = snapshot?.collection;
+  return <div className="modal-backdrop" onMouseDown={onClose}><section className="source-drawer" onMouseDown={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label="数据源与采集状态"><div className="drawer-head"><div><span className="drawer-icon"><Database /></span><div><h2>本次采集与数据血缘</h2><p>采集时间：{dataTime} CST</p></div></div><button onClick={onClose} aria-label="关闭"><X /></button></div><div className="schedule-card"><CalendarClock /><div><strong>每日自动采集</strong><span>北京时间17:30；失败不覆盖最后成功数据</span></div><em>已启用</em></div><div className="source-summary"><div><strong>{summary?.moduleCount ?? 9}</strong><span>已接入模块</span></div><div><strong>{summary?.successCount ?? 5}</strong><span>本次成功检查</span></div><div><strong>{summary?.failedCount ?? 0}</strong><span>失败并保留</span></div></div><div className="source-table"><div className="source-row source-th"><span>来源</span><span>数据类型</span><span>状态</span><span>更新时间</span></div>{sources.map((source) => <a className="source-row" href={source.url} target="_blank" rel="noreferrer" key={source.code}><strong>{source.name}</strong><span>{source.type}</span><span className={`source-status ${source.status !== "成功" ? "limited" : ""}`}><i />{source.status}</span><span>{source.fetchedAt.slice(5)}<ExternalLink size={12}/></span></a>)}</div><div className="trace-note"><ShieldCheck /><div><strong>质量规则</strong><p>每条数据保存来源链接、来源机构、发布日期、采集时间和解析口径。来源临时失败时保留上次成功值并明确标记；无法核验的数据保持空值。</p></div></div></section></div>;
 }

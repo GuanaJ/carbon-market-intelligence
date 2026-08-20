@@ -1,0 +1,1397 @@
+{
+  "version": 2,
+  "generatedAt": "2026-08-20T16:10:52.498Z",
+  "beijingTime": "2026-08-21 00:11",
+  "status": "complete",
+  "collection": {
+    "moduleCount": 9,
+    "publicModuleCount": 8,
+    "protectedModuleCount": 1,
+    "sourceChecks": 15,
+    "successCount": 15,
+    "failedCount": 0
+  },
+  "market": {
+    "cea": {
+      "tradeDate": "2026-08-20",
+      "close": 97.81,
+      "changePct": 0.42,
+      "open": 97.4,
+      "high": 98,
+      "low": 97.4,
+      "volume": "99.74万吨",
+      "turnover": "9,687.10万元",
+      "unit": "元/吨"
+    },
+    "ccer": {
+      "tradeDate": "2026-08-20",
+      "average": 94.83,
+      "volumeTco2e": 352877,
+      "changePct": 1.38,
+      "unit": "元/吨"
+    },
+    "trend": {
+      "近7日": [
+        {
+          "date": "08/12",
+          "ccer": 92.08
+        },
+        {
+          "date": "08/13",
+          "ccer": 96.34
+        },
+        {
+          "date": "08/14",
+          "ccer": 96.4
+        },
+        {
+          "date": "08/17",
+          "ccer": 96.19
+        },
+        {
+          "date": "08/18",
+          "ccer": 96.2
+        },
+        {
+          "date": "08/19",
+          "ccer": 93.54
+        },
+        {
+          "date": "08/20",
+          "ccer": 94.83,
+          "cea": 97.81
+        }
+      ],
+      "近30日": [
+        {
+          "date": "07/10",
+          "ccer": 83.87
+        },
+        {
+          "date": "07/13",
+          "ccer": 86.8
+        },
+        {
+          "date": "07/14",
+          "ccer": 81.94
+        },
+        {
+          "date": "07/15",
+          "ccer": 87.83
+        },
+        {
+          "date": "07/16",
+          "ccer": 83.61
+        },
+        {
+          "date": "07/17",
+          "ccer": 89.91
+        },
+        {
+          "date": "07/20",
+          "ccer": 80.52
+        },
+        {
+          "date": "07/21",
+          "ccer": 89.72
+        },
+        {
+          "date": "07/22",
+          "ccer": 90.31
+        },
+        {
+          "date": "07/23",
+          "ccer": 90.45
+        },
+        {
+          "date": "07/24",
+          "ccer": 88.15
+        },
+        {
+          "date": "07/27",
+          "ccer": 92
+        },
+        {
+          "date": "07/28",
+          "ccer": 93.34
+        },
+        {
+          "date": "07/29",
+          "ccer": 86.43
+        },
+        {
+          "date": "07/30",
+          "ccer": 93.8
+        },
+        {
+          "date": "07/31",
+          "ccer": 94.92
+        },
+        {
+          "date": "08/03",
+          "ccer": 92.18
+        },
+        {
+          "date": "08/04",
+          "ccer": 94.42
+        },
+        {
+          "date": "08/05",
+          "ccer": 94.92
+        },
+        {
+          "date": "08/06",
+          "ccer": 93.28
+        },
+        {
+          "date": "08/07",
+          "ccer": 94.01
+        },
+        {
+          "date": "08/10",
+          "ccer": 83.67
+        },
+        {
+          "date": "08/11",
+          "ccer": 95.71
+        },
+        {
+          "date": "08/12",
+          "ccer": 92.08
+        },
+        {
+          "date": "08/13",
+          "ccer": 96.34
+        },
+        {
+          "date": "08/14",
+          "ccer": 96.4
+        },
+        {
+          "date": "08/17",
+          "ccer": 96.19
+        },
+        {
+          "date": "08/18",
+          "ccer": 96.2
+        },
+        {
+          "date": "08/19",
+          "ccer": 93.54
+        },
+        {
+          "date": "08/20",
+          "ccer": 94.83,
+          "cea": 97.81
+        }
+      ],
+      "近1年": [
+        {
+          "date": "2026/05",
+          "ccer": 85.8
+        },
+        {
+          "date": "2026/05",
+          "ccer": 85.8
+        },
+        {
+          "date": "2026/05",
+          "ccer": 83.6
+        },
+        {
+          "date": "2026/05",
+          "ccer": 83.77
+        },
+        {
+          "date": "2026/05",
+          "ccer": 83.54
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.07
+        },
+        {
+          "date": "2026/06",
+          "ccer": 80.85
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.91
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.81
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.7
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.71
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.57
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.53
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.92
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.5
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83
+        },
+        {
+          "date": "2026/06",
+          "ccer": 89.38
+        },
+        {
+          "date": "2026/06",
+          "ccer": 82.9
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.21
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.67
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.3
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.3
+        },
+        {
+          "date": "2026/06",
+          "ccer": 83.36
+        },
+        {
+          "date": "2026/07",
+          "ccer": 83.35
+        },
+        {
+          "date": "2026/07",
+          "ccer": 83.4
+        },
+        {
+          "date": "2026/07",
+          "ccer": 83.56
+        },
+        {
+          "date": "2026/07",
+          "ccer": 85.06
+        },
+        {
+          "date": "2026/07",
+          "ccer": 80.31
+        },
+        {
+          "date": "2026/07",
+          "ccer": 86.46
+        },
+        {
+          "date": "2026/07",
+          "ccer": 85.04
+        },
+        {
+          "date": "2026/07",
+          "ccer": 83.87
+        },
+        {
+          "date": "2026/07",
+          "ccer": 86.8
+        },
+        {
+          "date": "2026/07",
+          "ccer": 81.94
+        },
+        {
+          "date": "2026/07",
+          "ccer": 87.83
+        },
+        {
+          "date": "2026/07",
+          "ccer": 83.61
+        },
+        {
+          "date": "2026/07",
+          "ccer": 89.91
+        },
+        {
+          "date": "2026/07",
+          "ccer": 80.52
+        },
+        {
+          "date": "2026/07",
+          "ccer": 89.72
+        },
+        {
+          "date": "2026/07",
+          "ccer": 90.31
+        },
+        {
+          "date": "2026/07",
+          "ccer": 90.45
+        },
+        {
+          "date": "2026/07",
+          "ccer": 88.15
+        },
+        {
+          "date": "2026/07",
+          "ccer": 92
+        },
+        {
+          "date": "2026/07",
+          "ccer": 93.34
+        },
+        {
+          "date": "2026/07",
+          "ccer": 86.43
+        },
+        {
+          "date": "2026/07",
+          "ccer": 93.8
+        },
+        {
+          "date": "2026/07",
+          "ccer": 94.92
+        },
+        {
+          "date": "2026/08",
+          "ccer": 92.18
+        },
+        {
+          "date": "2026/08",
+          "ccer": 94.42
+        },
+        {
+          "date": "2026/08",
+          "ccer": 94.92
+        },
+        {
+          "date": "2026/08",
+          "ccer": 93.28
+        },
+        {
+          "date": "2026/08",
+          "ccer": 94.01
+        },
+        {
+          "date": "2026/08",
+          "ccer": 83.67
+        },
+        {
+          "date": "2026/08",
+          "ccer": 95.71
+        },
+        {
+          "date": "2026/08",
+          "ccer": 92.08
+        },
+        {
+          "date": "2026/08",
+          "ccer": 96.34
+        },
+        {
+          "date": "2026/08",
+          "ccer": 96.4
+        },
+        {
+          "date": "2026/08",
+          "ccer": 96.19
+        },
+        {
+          "date": "2026/08",
+          "ccer": 96.2
+        },
+        {
+          "date": "2026/08",
+          "ccer": 93.54
+        },
+        {
+          "date": "2026/08",
+          "ccer": 94.83,
+          "cea": 97.81
+        }
+      ]
+    }
+  },
+  "modules": {
+    "市场行情数据库": {
+      "status": "本次采集成功",
+      "metrics": {
+        "全国CEA日行情": {
+          "value": "97.81",
+          "unit": "元/吨",
+          "summary": "2026-08-20收盘；当日成交99.74万吨",
+          "source": "上海环境能源交易所"
+        },
+        "全国CCER日行情": {
+          "value": "94.83",
+          "unit": "元/吨",
+          "summary": "2026-08-20成交均价；成交352,877吨",
+          "source": "全国CCER交易系统"
+        },
+        "区域试点碳市场": {
+          "value": "公开源巡检",
+          "unit": "",
+          "summary": "保留公开交易机构入口；各试点异构接口逐步扩展。",
+          "source": "地方交易机构"
+        },
+        "成交量与成交额": {
+          "value": "99.74万吨",
+          "unit": "CEA",
+          "summary": "成交额9,687.10万元",
+          "source": "上海环境能源交易所"
+        },
+        "价差与基差": {
+          "value": "2.98",
+          "unit": "元/吨",
+          "summary": "CEA收盘价减CCER成交均价。",
+          "source": "平台计算"
+        },
+        "历史价格序列": {
+          "value": "62",
+          "unit": "个交易日",
+          "summary": "CCER官方近90日文件中的可核验交易日。",
+          "source": "全国CCER交易系统"
+        }
+      },
+      "records": [
+        {
+          "date": "08-20",
+          "title": "全国CEA日行情",
+          "value": "97.81元/吨 · 99.74万吨",
+          "source": "上海环境能源交易所",
+          "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
+          "tag": "CEA"
+        },
+        {
+          "date": "08-20",
+          "title": "全国CCER日行情",
+          "value": "94.83元/吨 · 352,877吨",
+          "source": "全国CCER交易系统",
+          "url": "https://www.ccer.com.cn/",
+          "tag": "CCER"
+        }
+      ]
+    },
+    "配额供需与履约": {
+      "status": "本次采集成功",
+      "metrics": {
+        "配额总量与分配": {
+          "value": "2025—2026",
+          "unit": "方案跟踪",
+          "summary": "发电及钢铁、水泥、铝冶炼行业配额方案公开信息。",
+          "source": "生态环境部"
+        },
+        "行业配额结构": {
+          "value": "4",
+          "unit": "重点行业",
+          "summary": "发电、钢铁、水泥、铝冶炼。",
+          "source": "生态环境部"
+        },
+        "企业持有与缺口": {
+          "value": "待授权",
+          "unit": "",
+          "summary": "企业级持仓及缺口仅接受授权数据。",
+          "source": "客户授权数据"
+        },
+        "年度清缴进度": {
+          "value": "公开信息跟踪",
+          "unit": "",
+          "summary": "按生态环境部通知、履约安排与年度总结更新。",
+          "source": "生态环境部"
+        },
+        "抵销需求测算": {
+          "value": "模型已就绪",
+          "unit": "",
+          "summary": "待接入企业排放与配额数据后计算。",
+          "source": "平台模型"
+        },
+        "履约完成情况": {
+          "value": "7",
+          "unit": "条相关公开记录",
+          "summary": "本次从生态环境部碳市场专题页识别。",
+          "source": "生态环境部"
+        }
+      },
+      "records": [
+        {
+          "date": "08-13",
+          "title": "关于公开征求《温室气体自愿减排项目方法学 更新造林碳汇（征求意见稿）》等3项方法学意见的函",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202608/t20260813_1164027.html",
+          "tag": "履约"
+        },
+        {
+          "date": "07-27",
+          "title": "关于公开征求《全国碳排放权交易市场2025、2026年度发电行业以及2026年度钢铁、水泥、铝冶炼行业配额总量和分配方案（征求意见稿）》意见的通知",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202607/t20260727_1162839.html",
+          "tag": "配额"
+        },
+        {
+          "date": "06-26",
+          "title": "关于公开征求《温室气体自愿减排项目方法学 造林碳汇（修订征求意见稿）》和《温室气体自愿减排项目方法学 红树林营造（修订征求意见稿）》意见的函",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202606/t20260626_1160307.html",
+          "tag": "履约"
+        },
+        {
+          "date": "02-09",
+          "title": "关于做好2026年全国碳排放权交易市场有关工作的通知",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202602/t20260209_1143900.html",
+          "tag": "履约"
+        },
+        {
+          "date": "01-01",
+          "title": "2025年全国碳市场平稳有序运行 圆满完成年度建设工作",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/ywgz/ydqhbh/wsqtkz/202601/t20260101_1139528.shtml",
+          "tag": "履约"
+        },
+        {
+          "date": "12-26",
+          "title": "关于发布《温室气体自愿减排项目方法学 中深层地热能井下换热供暖技术应用工程（CCER—01—003—V01）》的通知",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202512/t20251226_1139063.html",
+          "tag": "履约"
+        },
+        {
+          "date": "12-26",
+          "title": "关于发布《温室气体自愿减排项目方法学 可再生能源电解水制氢（CCER—01—004—V01）》等2项方法学的通知",
+          "value": "配额/履约公开信息",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202512/t20251226_1139056.html",
+          "tag": "履约"
+        }
+      ]
+    },
+    "CCER项目与减排量": {
+      "status": "本次采集成功",
+      "metrics": {
+        "项目登记公示": {
+          "value": "41",
+          "unit": "个",
+          "summary": "另有3个项目处于公开公示。",
+          "source": "全国CCER注册登记系统"
+        },
+        "减排量登记": {
+          "value": "25",
+          "unit": "个项目",
+          "summary": "另有0个减排量申请处于公开公示。",
+          "source": "全国CCER注册登记系统"
+        },
+        "方法学清单": {
+          "value": "18",
+          "unit": "项",
+          "summary": "公开系统当前已发布方法学清单。",
+          "source": "全国CCER注册登记系统"
+        },
+        "项目地域分布": {
+          "value": "项目级",
+          "unit": "动态",
+          "summary": "保留项目名称、业主与项目类型；地域字段按公开详情扩展。",
+          "source": "全国CCER注册登记系统"
+        },
+        "签发量与预期供给": {
+          "value": "项目级",
+          "unit": "跟踪",
+          "summary": "不在缺少核验字段时汇总推算减排量。",
+          "source": "全国CCER注册登记系统"
+        },
+        "项目状态追踪": {
+          "value": "公示/登记",
+          "unit": "实时",
+          "summary": "项目与减排量公开查询同步更新。",
+          "source": "全国CCER注册登记系统"
+        }
+      },
+      "records": [
+        {
+          "date": "当前",
+          "title": "国家电投吐鲁番鄯善100MW光热一体化发电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "并网光热发电"
+        },
+        {
+          "date": "当前",
+          "title": "龙海九龙江口红树林省级保护站/湿地保护站漳州市九龙江口红树林植被修复项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "红树林营造"
+        },
+        {
+          "date": "当前",
+          "title": "中广核惠州港口二期PB300兆瓦海上风电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "并网海上风力发电"
+        },
+        {
+          "date": "当前",
+          "title": "中广核惠州港口二期PA450兆瓦海上风电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "并网海上风力发电"
+        },
+        {
+          "date": "当前",
+          "title": "中广核惠州港口二期PB300兆瓦海上风电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "减排量"
+        },
+        {
+          "date": "当前",
+          "title": "中广核太阳能德令哈一期50兆瓦光热独立发电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "减排量"
+        },
+        {
+          "date": "当前",
+          "title": "国家电投揭阳神泉一（二期）91MW海上风电项目",
+          "value": "已登记",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "减排量"
+        },
+        {
+          "date": "10-24",
+          "title": "并网光热发电",
+          "value": "CCER-01-001-V01",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "方法学"
+        },
+        {
+          "date": "10-24",
+          "title": "并网海上风力发电",
+          "value": "CCER-01-002-V01",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "方法学"
+        },
+        {
+          "date": "01-12",
+          "title": "中深层地热能井下换热供暖技术应用工程",
+          "value": "CCER-01-003-V01",
+          "source": "全国CCER注册登记系统",
+          "url": "https://ccer.cets.org.cn/",
+          "tag": "方法学"
+        }
+      ]
+    },
+    "政策与市场事件": {
+      "status": "本次采集成功",
+      "metrics": {
+        "中央政策": {
+          "value": "7",
+          "unit": "条相关记录",
+          "summary": "本次生态环境部碳市场公开页面匹配结果。",
+          "source": "生态环境部"
+        },
+        "地方规则": {
+          "value": "1",
+          "unit": "条相关动态",
+          "summary": "本次地方生态环境动态匹配结果。",
+          "source": "生态环境部地方动态"
+        },
+        "交易所公告": {
+          "value": "行情同步",
+          "unit": "",
+          "summary": "交易日行情来源状态同步写入数据血缘。",
+          "source": "交易机构"
+        },
+        "行业动态": {
+          "value": "8",
+          "unit": "条能源动态",
+          "summary": "能源、电力、煤炭及油气政策匹配结果。",
+          "source": "国家发展改革委"
+        },
+        "政策时间轴": {
+          "value": "动态",
+          "unit": "",
+          "summary": "按原始页面发布日期排序。",
+          "source": "平台整理"
+        },
+        "事件影响标签": {
+          "value": "8",
+          "unit": "类",
+          "summary": "供给、需求、价格、履约、项目、绿证、园区、工厂。",
+          "source": "平台分类"
+        }
+      },
+      "records": [
+        {
+          "date": "08-13",
+          "title": "关于公开征求《温室气体自愿减排项目方法学 更新造林碳汇（征求意见稿）》等3项方法学意见的函",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202608/t20260813_1164027.html",
+          "tag": "政策"
+        },
+        {
+          "date": "07-27",
+          "title": "关于公开征求《全国碳排放权交易市场2025、2026年度发电行业以及2026年度钢铁、水泥、铝冶炼行业配额总量和分配方案（征求意见稿）》意见的通知",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202607/t20260727_1162839.html",
+          "tag": "政策"
+        },
+        {
+          "date": "06-26",
+          "title": "关于公开征求《温室气体自愿减排项目方法学 造林碳汇（修订征求意见稿）》和《温室气体自愿减排项目方法学 红树林营造（修订征求意见稿）》意见的函",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202606/t20260626_1160307.html",
+          "tag": "政策"
+        },
+        {
+          "date": "02-09",
+          "title": "关于做好2026年全国碳排放权交易市场有关工作的通知",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202602/t20260209_1143900.html",
+          "tag": "政策"
+        },
+        {
+          "date": "01-01",
+          "title": "2025年全国碳市场平稳有序运行 圆满完成年度建设工作",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/ywgz/ydqhbh/wsqtkz/202601/t20260101_1139528.shtml",
+          "tag": "政策"
+        },
+        {
+          "date": "12-26",
+          "title": "关于发布《温室气体自愿减排项目方法学 中深层地热能井下换热供暖技术应用工程（CCER—01—003—V01）》的通知",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202512/t20251226_1139063.html",
+          "tag": "政策"
+        },
+        {
+          "date": "12-26",
+          "title": "关于发布《温室气体自愿减排项目方法学 可再生能源电解水制氢（CCER—01—004—V01）》等2项方法学的通知",
+          "value": "政策/市场规则更新",
+          "source": "生态环境部",
+          "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202512/t20251226_1139056.html",
+          "tag": "政策"
+        },
+        {
+          "date": "08-10",
+          "title": "关于印发《煤炭工业发展“十五五”规划》的通知",
+          "value": "能源与宏观政策",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html",
+          "tag": "外部因素"
+        },
+        {
+          "date": "08-03",
+          "title": "关于印发《新型电力系统建设“十五五”规划》的通知",
+          "value": "能源与宏观政策",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260803_1406884.html",
+          "tag": "外部因素"
+        },
+        {
+          "date": "08-19",
+          "title": "国家发展改革委与厄瓜多尔环境和能源部签署合作文件",
+          "value": "能源与宏观政策",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/fzggw/wld/zsj/zyhd/202608/t20260819_1407092.html",
+          "tag": "外部因素"
+        },
+        {
+          "date": "06-15",
+          "title": "2026年全国节能宣传周今天启动",
+          "value": "能源与宏观政策",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/dt/sjdt/202606/t20260615_1405866.html",
+          "tag": "外部因素"
+        }
+      ]
+    },
+    "碳价外部影响因素": {
+      "status": "本次采集成功",
+      "metrics": {
+        "煤炭与天然气": {
+          "value": "4",
+          "unit": "条政策信号",
+          "summary": "本次国家发展改革委公开页面匹配结果。",
+          "source": "国家发展改革委"
+        },
+        "电力与发电量": {
+          "value": "4",
+          "unit": "条动态",
+          "summary": "国家能源局电力市场公开动态。",
+          "source": "国家能源局"
+        },
+        "气温与降水": {
+          "value": "26.4℃ / 0mm",
+          "unit": "北京代表点",
+          "summary": "10米风速3.6km/h。",
+          "source": "Open-Meteo"
+        },
+        "宏观指标": {
+          "value": "7.8538",
+          "unit": "EUR/CNY",
+          "summary": "ECB 2026-08-20参考汇率；EUR/USD 1.1681。",
+          "source": "欧洲中央银行"
+        },
+        "EUA联动": {
+          "value": "待授权行情",
+          "unit": "",
+          "summary": "当前不使用非授权接口伪装实时EUA价格。",
+          "source": "欧洲能源交易所"
+        },
+        "履约季节性": {
+          "value": "Q4",
+          "unit": "敏感期",
+          "summary": "履约临近通常提升配额采购关注度。",
+          "source": "平台规则"
+        }
+      },
+      "records": [
+        {
+          "date": "08-20",
+          "title": "欧洲中央银行参考汇率",
+          "value": "EUR/CNY 7.8538 · EUR/USD 1.1681",
+          "source": "欧洲中央银行",
+          "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+          "tag": "汇率"
+        },
+        {
+          "date": "当前",
+          "title": "北京代表点气象",
+          "value": "26.4℃ · 降水0mm · 风速3.6km/h",
+          "source": "Open-Meteo",
+          "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
+          "tag": "气象"
+        },
+        {
+          "date": "08-10",
+          "title": "关于印发《煤炭工业发展“十五五”规划》的通知",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html",
+          "tag": "能源"
+        },
+        {
+          "date": "08-03",
+          "title": "关于印发《新型电力系统建设“十五五”规划》的通知",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260803_1406884.html",
+          "tag": "能源"
+        },
+        {
+          "date": "08-19",
+          "title": "国家发展改革委与厄瓜多尔环境和能源部签署合作文件",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/fzggw/wld/zsj/zyhd/202608/t20260819_1407092.html",
+          "tag": "能源"
+        },
+        {
+          "date": "06-15",
+          "title": "2026年全国节能宣传周今天启动",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xwdt/dt/sjdt/202606/t20260615_1405866.html",
+          "tag": "能源"
+        },
+        {
+          "date": "08-17",
+          "title": "关于印发《石油天然气发展“十五五”规划》的通知(发改能源〔2026〕1055号)",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202608/t20260817_1407041.html",
+          "tag": "能源"
+        },
+        {
+          "date": "08-10",
+          "title": "国家发展改革委 国家能源局有关负责同志就《煤炭工业发展“十五五”规划》答记者问",
+          "value": "能源/宏观政策信号",
+          "source": "国家发展改革委",
+          "url": "https://www.ndrc.gov.cn/xxgk/jd/jd/202608/t20260810_1406951.html",
+          "tag": "能源"
+        }
+      ]
+    },
+    "公司及客户碳资产": {
+      "status": "授权边界已启用",
+      "metrics": {
+        "配额账户": {
+          "value": "待导入",
+          "unit": "",
+          "summary": "支持期初、发放、交易、清缴与结转。",
+          "source": "客户授权数据"
+        },
+        "CCER账户": {
+          "value": "待导入",
+          "unit": "",
+          "summary": "支持持仓、购入、抵销与核销记录。",
+          "source": "客户授权数据"
+        },
+        "绿证账户": {
+          "value": "待导入",
+          "unit": "",
+          "summary": "支持购买、划转、核销与用途。",
+          "source": "客户授权数据"
+        },
+        "碳资产估值": {
+          "value": "已就绪",
+          "unit": "",
+          "summary": "按市场价、成本价与情景价估值。",
+          "source": "平台模型"
+        },
+        "履约缺口": {
+          "value": "已就绪",
+          "unit": "",
+          "summary": "核定排放减可用配额与可用抵销量。",
+          "source": "平台模型"
+        },
+        "交易与核销台账": {
+          "value": "已就绪",
+          "unit": "",
+          "summary": "保留凭证、对手方和交易时间。",
+          "source": "客户授权数据"
+        }
+      },
+      "records": [
+        {
+          "date": "说明",
+          "title": "客户数据边界",
+          "value": "未授权数据不采集、不推断、不展示",
+          "source": "平台数据治理规则",
+          "url": "#",
+          "tag": "隐私"
+        }
+      ]
+    },
+    "零碳园区动态": {
+      "status": "本次采集成功",
+      "metrics": {
+        "国家与地方试点": {
+          "value": "约100",
+          "unit": "个国家级目标",
+          "summary": "“十五五”期间国家级零碳园区建设目标。",
+          "source": "国务院"
+        },
+        "园区能源结构": {
+          "value": "绿电优先",
+          "unit": "",
+          "summary": "支持存量负荷开展绿电直连。",
+          "source": "国务院"
+        },
+        "碳排放盘查": {
+          "value": "全口径",
+          "unit": "",
+          "summary": "覆盖能源、工业过程与间接排放。",
+          "source": "平台指标框架"
+        },
+        "项目建设进度": {
+          "value": "0",
+          "unit": "条动态",
+          "summary": "本次地方公开页面匹配结果。",
+          "source": "生态环境部地方动态"
+        },
+        "绿电配置": {
+          "value": "直连/微网",
+          "unit": "",
+          "summary": "绿电直连与园区微网为重点路径。",
+          "source": "国务院"
+        },
+        "政策与标准": {
+          "value": "持续跟踪",
+          "unit": "",
+          "summary": "国家与地方公开政策页面每日巡检。",
+          "source": "国务院/地方主管部门"
+        }
+      },
+      "records": [
+        {
+          "date": "07-14",
+          "title": "国家级零碳园区建设目标",
+          "value": "“十五五”期间约100个",
+          "source": "国务院",
+          "url": "https://www.mee.gov.cn/zcwj/gwywj/202607/t20260714_1161655.shtml",
+          "tag": "目标"
+        }
+      ]
+    },
+    "零碳工厂动态": {
+      "status": "本次采集成功",
+      "metrics": {
+        "工厂名录": {
+          "value": "约500",
+          "unit": "个目标",
+          "summary": "“十五五”期间零碳工厂建设目标。",
+          "source": "国务院"
+        },
+        "认证与评价": {
+          "value": "标准跟踪",
+          "unit": "",
+          "summary": "区分政策目标、评价标准与第三方认证。",
+          "source": "标准公开信息"
+        },
+        "节能降碳技改": {
+          "value": "0",
+          "unit": "条动态",
+          "summary": "本次产业降碳公开页面匹配结果。",
+          "source": "生态环境部地方动态"
+        },
+        "产品碳足迹": {
+          "value": "体系建设中",
+          "unit": "",
+          "summary": "持续跟踪核算、因子与认证体系。",
+          "source": "生态环境部"
+        },
+        "清洁能源利用": {
+          "value": "绿电直连",
+          "unit": "",
+          "summary": "支持符合条件的工业企业开展绿电直连。",
+          "source": "国务院"
+        },
+        "减排绩效": {
+          "value": "17%+",
+          "unit": "强度下降目标",
+          "summary": "规模以上工业单位增加值二氧化碳排放目标。",
+          "source": "国务院"
+        }
+      },
+      "records": [
+        {
+          "date": "07-14",
+          "title": "零碳工厂建设目标明确",
+          "value": "“十五五”期间约500个",
+          "source": "国务院",
+          "url": "https://www.mee.gov.cn/zcwj/gwywj/202607/t20260714_1161655.shtml",
+          "tag": "目标"
+        }
+      ]
+    },
+    "绿电绿证数据库": {
+      "status": "本次采集成功",
+      "metrics": {
+        "月度核发量": {
+          "value": "3.73",
+          "unit": "亿个",
+          "summary": "国家能源局最近已核验月度公开数据。",
+          "source": "国家能源局"
+        },
+        "绿证交易量": {
+          "value": "8,273",
+          "unit": "万个",
+          "summary": "国家能源局最近已核验月度公开数据。",
+          "source": "国家能源局"
+        },
+        "单独交易价格": {
+          "value": "1.29/4.05/5.96",
+          "unit": "元/个",
+          "summary": "对应2024/2025/2026年电量生产年份。",
+          "source": "国家能源局"
+        },
+        "绿电交易": {
+          "value": "2",
+          "unit": "条动态",
+          "summary": "本次国家能源局公开页面匹配结果。",
+          "source": "国家能源局"
+        },
+        "电源类型结构": {
+          "value": "风光居前",
+          "unit": "",
+          "summary": "风电、太阳能交易规模位居前列。",
+          "source": "国家能源局"
+        },
+        "区域供需": {
+          "value": "价格指数上线",
+          "unit": "",
+          "summary": "中国绿证价格指数已发布。",
+          "source": "国家能源局"
+        }
+      },
+      "records": [
+        {
+          "date": "07-24",
+          "title": "全国绿证核发及交易数据",
+          "value": "核发3.73亿个 · 交易8,273万个",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260724/d35b8a39fb724572b3d3ce3cbed9d4e9/c.html",
+          "tag": "月度"
+        },
+        {
+          "date": "07-30",
+          "title": "国家能源局召开扩大绿电应用专题会暨《可再生能源消费最低比重目标和可再生能源电力消纳责任权重制度实施办法》政策宣贯会",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260730/32394addd74a434c93d1a42e9d50366c/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "07-27",
+          "title": "2026年1—6月全国电力市场交易电量同比增长24.2%",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260727/560b4ea8e0254484a08ea551ce54bde2/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "07-24",
+          "title": "国家能源局正式发布中国绿证价格指数",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260724/808ea736bb9741909dd46f8cb32ea0de/c.html",
+          "tag": "绿证"
+        },
+        {
+          "date": "07-24",
+          "title": "关于中国—国际可再生能源署（IRENA）合作专项工作组换届及扩容结果的公告",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260724/aabe4bec49d141daaa36901c276997c9/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "07-23",
+          "title": "国家发展改革委 国家能源局关于印发《可再生能源发展“十五五”规划》的通知",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260723/cab1eb6727674bcf9a0efea45ed525e0/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "08-03",
+          "title": "国家发展改革委 国家能源局关于印发《新型电力系统建设“十五五”规划》的通知",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260803/f90e2bdec3744f3c90898ca65e31e597/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "08-17",
+          "title": "国家能源局组织召开全国可再生能源电力开发建设月度（7月）调度视频会",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260817/3b9aadf9d3e540879aa8e1d15405ff71/c.html",
+          "tag": "绿电"
+        },
+        {
+          "date": "08-17",
+          "title": "虚拟电厂：让绿电“发得出”又“用得好”",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260817/10ef4d7abc264738ba1dbd868863cd72/c.html",
+          "tag": "绿电"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "code": "NEA-GREEN",
+      "name": "国家能源局",
+      "type": "绿证月度数据",
+      "url": "https://www.nea.gov.cn/20260724/d35b8a39fb724572b3d3ce3cbed9d4e9/c.html",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 11036
+    },
+    {
+      "code": "NEA",
+      "name": "国家能源局",
+      "type": "绿电绿证与电力",
+      "url": "https://www.nea.gov.cn/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 8,
+      "latencyMs": 11041
+    },
+    {
+      "code": "ECB",
+      "name": "欧洲中央银行",
+      "type": "欧元汇率",
+      "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 13626
+    },
+    {
+      "code": "CCER-TRADE",
+      "name": "全国CCER交易系统",
+      "type": "CCER近90日行情",
+      "url": "https://www.ccer.com.cn/wcm/ccer/data/90-first.json",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 64,
+      "latencyMs": 13634
+    },
+    {
+      "code": "NDRC",
+      "name": "国家发展改革委",
+      "type": "能源与宏观政策",
+      "url": "https://www.ndrc.gov.cn/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 8,
+      "latencyMs": 13988
+    },
+    {
+      "code": "MEE-LOCAL",
+      "name": "生态环境部地方动态",
+      "type": "园区与工厂动态",
+      "url": "https://www.mee.gov.cn/ywdt/dfnews/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 8,
+      "latencyMs": 14192
+    },
+    {
+      "code": "MEE-CARBON",
+      "name": "生态环境部",
+      "type": "碳市场政策与履约",
+      "url": "https://www.mee.gov.cn/ywgz/ydqhbh/wsqtkz/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 8,
+      "latencyMs": 14192
+    },
+    {
+      "code": "ZERO-POLICY",
+      "name": "国务院政策（生态环境部发布）",
+      "type": "零碳园区与工厂目标",
+      "url": "https://www.mee.gov.cn/zcwj/gwywj/202607/t20260714_1161655.shtml",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 14192
+    },
+    {
+      "code": "CCER-REG-1",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 1",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 14665
+    },
+    {
+      "code": "OPEN-METEO",
+      "name": "Open-Meteo",
+      "type": "北京代表性气象",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 14699
+    },
+    {
+      "code": "CCER-REG-2",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 2",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 14741
+    },
+    {
+      "code": "CCER-REG-3",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 3",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 15044
+    },
+    {
+      "code": "CCER-METHOD",
+      "name": "全国CCER注册登记系统",
+      "type": "方法学清单",
+      "url": "https://ccer.cets.org.cn/api/methodology/host/methodologVisit/20",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 12,
+      "latencyMs": 15157
+    },
+    {
+      "code": "CNEEEX",
+      "name": "上海环境能源交易所",
+      "type": "CEA日行情",
+      "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 15235
+    },
+    {
+      "code": "CCER-REG-4",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 4",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-21 00:11",
+      "records": 1,
+      "latencyMs": 15345
+    }
+  ]
+}
