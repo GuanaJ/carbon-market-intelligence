@@ -31,12 +31,12 @@ jobs:
         run: npm run collect:pages
       - name: Commit updated snapshot
         run: |
-          if git diff --quiet -- public/data/latest-market.json public/data/platform-snapshot.json public/data/collection-log.json; then
+          if git diff --quiet -- public/data/latest-market.json public/data/platform-snapshot.json public/data/collection-log.json public/data/records-db.json public/data/market-history.json; then
             echo "No verified update"
           else
             git config user.name "carbon-data-bot"
             git config user.email "carbon-data-bot@users.noreply.github.com"
-            git add -- public/data/latest-market.json public/data/platform-snapshot.json public/data/collection-log.json
+            git add -- public/data/latest-market.json public/data/platform-snapshot.json public/data/collection-log.json public/data/records-db.json public/data/market-history.json
             git commit -m "data: refresh all-module snapshot"
             git push
           fi

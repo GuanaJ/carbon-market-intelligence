@@ -1,0 +1,315 @@
+[
+  {
+    "date": "2026-05-25",
+    "ccer": 85.8,
+    "ccerVolume": 250
+  },
+  {
+    "date": "2026-05-27",
+    "ccer": 83.6,
+    "ccerVolume": 35004
+  },
+  {
+    "date": "2026-05-28",
+    "ccer": 83.77,
+    "ccerVolume": 177136
+  },
+  {
+    "date": "2026-05-29",
+    "ccer": 83.54,
+    "ccerVolume": 30042
+  },
+  {
+    "date": "2026-06-01",
+    "ccer": 83.07,
+    "ccerVolume": 145554
+  },
+  {
+    "date": "2026-06-02",
+    "ccer": 80.85,
+    "ccerVolume": 81000
+  },
+  {
+    "date": "2026-06-03",
+    "ccer": 83,
+    "ccerVolume": 50000
+  },
+  {
+    "date": "2026-06-04",
+    "ccer": 83,
+    "ccerVolume": 10000
+  },
+  {
+    "date": "2026-06-05",
+    "ccer": 82.91,
+    "ccerVolume": 341027
+  },
+  {
+    "date": "2026-06-08",
+    "ccer": 82.81,
+    "ccerVolume": 224348
+  },
+  {
+    "date": "2026-06-09",
+    "ccer": 82.7,
+    "ccerVolume": 40033
+  },
+  {
+    "date": "2026-06-10",
+    "ccer": 82.71,
+    "ccerVolume": 51992
+  },
+  {
+    "date": "2026-06-11",
+    "ccer": 82.57,
+    "ccerVolume": 259241
+  },
+  {
+    "date": "2026-06-12",
+    "ccer": 82.53,
+    "ccerVolume": 5818
+  },
+  {
+    "date": "2026-06-15",
+    "ccer": 82.92,
+    "ccerVolume": 326022
+  },
+  {
+    "date": "2026-06-16",
+    "ccer": 82.5,
+    "ccerVolume": 458515
+  },
+  {
+    "date": "2026-06-17",
+    "ccer": 83,
+    "ccerVolume": 40010
+  },
+  {
+    "date": "2026-06-18",
+    "ccer": 89.38,
+    "ccerVolume": 10200
+  },
+  {
+    "date": "2026-06-23",
+    "ccer": 82.9,
+    "ccerVolume": 60000
+  },
+  {
+    "date": "2026-06-24",
+    "ccer": 83.21,
+    "ccerVolume": 49000
+  },
+  {
+    "date": "2026-06-25",
+    "ccer": 83.67,
+    "ccerVolume": 10810
+  },
+  {
+    "date": "2026-06-26",
+    "ccer": 83.3,
+    "ccerVolume": 21212
+  },
+  {
+    "date": "2026-06-29",
+    "ccer": 83.3,
+    "ccerVolume": 20500
+  },
+  {
+    "date": "2026-06-30",
+    "ccer": 83.36,
+    "ccerVolume": 70000
+  },
+  {
+    "date": "2026-07-01",
+    "ccer": 83.35,
+    "ccerVolume": 23500
+  },
+  {
+    "date": "2026-07-02",
+    "ccer": 83.4,
+    "ccerVolume": 49573
+  },
+  {
+    "date": "2026-07-03",
+    "ccer": 83.56,
+    "ccerVolume": 60021
+  },
+  {
+    "date": "2026-07-06",
+    "ccer": 85.06,
+    "ccerVolume": 42800
+  },
+  {
+    "date": "2026-07-07",
+    "ccer": 80.31,
+    "ccerVolume": 322060
+  },
+  {
+    "date": "2026-07-08",
+    "ccer": 86.46,
+    "ccerVolume": 7510
+  },
+  {
+    "date": "2026-07-09",
+    "ccer": 85.04,
+    "ccerVolume": 510
+  },
+  {
+    "date": "2026-07-10",
+    "ccer": 83.87,
+    "ccerVolume": 122000
+  },
+  {
+    "date": "2026-07-13",
+    "ccer": 86.8,
+    "ccerVolume": 5022
+  },
+  {
+    "date": "2026-07-14",
+    "ccer": 81.94,
+    "ccerVolume": 358319
+  },
+  {
+    "date": "2026-07-15",
+    "ccer": 87.83,
+    "ccerVolume": 25261
+  },
+  {
+    "date": "2026-07-16",
+    "ccer": 83.61,
+    "ccerVolume": 336016
+  },
+  {
+    "date": "2026-07-17",
+    "ccer": 89.91,
+    "ccerVolume": 40610
+  },
+  {
+    "date": "2026-07-20",
+    "ccer": 80.52,
+    "ccerVolume": 62001
+  },
+  {
+    "date": "2026-07-21",
+    "ccer": 89.72,
+    "ccerVolume": 25001
+  },
+  {
+    "date": "2026-07-22",
+    "ccer": 90.31,
+    "ccerVolume": 29867
+  },
+  {
+    "date": "2026-07-23",
+    "ccer": 90.45,
+    "ccerVolume": 141001
+  },
+  {
+    "date": "2026-07-24",
+    "ccer": 88.15,
+    "ccerVolume": 130435
+  },
+  {
+    "date": "2026-07-27",
+    "ccer": 92,
+    "ccerVolume": 3987
+  },
+  {
+    "date": "2026-07-28",
+    "ccer": 93.34,
+    "ccerVolume": 139643
+  },
+  {
+    "date": "2026-07-29",
+    "ccer": 86.43,
+    "ccerVolume": 233418
+  },
+  {
+    "date": "2026-07-30",
+    "ccer": 93.8,
+    "ccerVolume": 145317
+  },
+  {
+    "date": "2026-07-31",
+    "ccer": 94.92,
+    "ccerVolume": 367751
+  },
+  {
+    "date": "2026-08-03",
+    "ccer": 92.18,
+    "ccerVolume": 316872
+  },
+  {
+    "date": "2026-08-04",
+    "ccer": 94.42,
+    "ccerVolume": 571370
+  },
+  {
+    "date": "2026-08-05",
+    "ccer": 94.92,
+    "ccerVolume": 289450
+  },
+  {
+    "date": "2026-08-06",
+    "ccer": 93.28,
+    "ccerVolume": 332514
+  },
+  {
+    "date": "2026-08-07",
+    "ccer": 94.01,
+    "ccerVolume": 190811
+  },
+  {
+    "date": "2026-08-10",
+    "ccer": 83.67,
+    "ccerVolume": 165999
+  },
+  {
+    "date": "2026-08-11",
+    "ccer": 95.71,
+    "ccerVolume": 121108
+  },
+  {
+    "date": "2026-08-12",
+    "ccer": 92.08,
+    "ccerVolume": 166112
+  },
+  {
+    "date": "2026-08-13",
+    "ccer": 96.34,
+    "ccerVolume": 122497
+  },
+  {
+    "date": "2026-08-14",
+    "ccer": 96.4,
+    "ccerVolume": 42111
+  },
+  {
+    "date": "2026-08-17",
+    "ccer": 96.19,
+    "ccerVolume": 117772
+  },
+  {
+    "date": "2026-08-18",
+    "ccer": 96.2,
+    "ccerVolume": 116000
+  },
+  {
+    "date": "2026-08-19",
+    "ccer": 93.54,
+    "ccerVolume": 73387
+  },
+  {
+    "date": "2026-08-20",
+    "ccer": 94.83,
+    "ccerVolume": 352877,
+    "cea": 97.81,
+    "ceaVolume": "99.74万吨",
+    "ceaTurnover": "9,687.10万元"
+  },
+  {
+    "date": "2026-08-21",
+    "ccer": 96.34,
+    "ccerVolume": 184148
+  }
+]

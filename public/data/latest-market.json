@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-20T16:10:52.498Z",
-  "beijingTime": "2026-08-21 00:11",
+  "generatedAt": "2026-08-21T09:36:39.689Z",
+  "beijingTime": "2026-08-21 17:36",
   "status": "official-direct",
   "source": {
     "name": "全国碳市场公开交易系统",
@@ -19,10 +19,10 @@
     "unit": "元/吨"
   },
   "ccer": {
-    "tradeDate": "2026-08-20",
-    "average": 94.83,
-    "volumeTco2e": 352877,
-    "changePct": 1.38,
+    "tradeDate": "2026-08-21",
+    "average": 96.34,
+    "volumeTco2e": 184148,
+    "changePct": 1.59,
     "unit": "元/吨"
   }
 }

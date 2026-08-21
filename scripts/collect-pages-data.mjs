@@ -1,11 +1,15 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const root = new URL("../", import.meta.url);
 const snapshotPath = fileURLToPath(new URL("public/data/platform-snapshot.json", root));
 const marketPath = fileURLToPath(new URL("public/data/latest-market.json", root));
 const logPath = fileURLToPath(new URL("public/data/collection-log.json", root));
+const recordsPath = fileURLToPath(new URL("public/data/records-db.json", root));
+const marketHistoryPath = fileURLToPath(new URL("public/data/market-history.json", root));
 const userAgent = "Mozilla/5.0 (compatible; CarbonMarketIntelligence/2.0; +https://github.com/GuanaJ/carbon-market-intelligence)";
+const PARSER_VERSION = "2026.08.21-v3";
 const now = new Date();
 const generatedAt = now.toISOString();
 
@@ -40,6 +44,12 @@ function isoDate(value) {
   const match = text.match(/(20\d{2})[-/.年](\d{1,2})[-/.月](\d{1,2})/);
   return match ? `${match[1]}-${match[2].padStart(2, "0")}-${match[3].padStart(2, "0")}` : undefined;
 }
+function publishedDate(value) {
+  const full = isoDate(value);
+  if (full) return full;
+  const short = String(value ?? "").trim().match(/^(\d{1,2})[-/.月](\d{1,2})/);
+  return short ? `${new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric" }).format(now)}-${short[1].padStart(2, "0")}-${short[2].padStart(2, "0")}` : undefined;
+}
 function shortDate(value) { const date = isoDate(value); return date ? date.slice(5) : String(value ?? "—"); }
 function num(value) {
   if (typeof value === "number") return Number.isFinite(value) ? value : undefined;
@@ -48,6 +58,12 @@ function num(value) {
 }
 function stripHtml(value) {
   return String(value ?? "").replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;|&#160;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, "\"").replace(/&#39;/gi, "'").replace(/\s+/g, " ").trim();
+}
+function hash(value) {
+  return createHash("sha256").update(typeof value === "string" ? value : JSON.stringify(value)).digest("hex");
+}
+function naturalKey(moduleName, item) {
+  return hash([moduleName, item.url || "", item.title || "", publishedDate(item.date) || item.date || ""].join("|")).slice(0, 32);
 }
 function anchors(html, baseUrl) {
   const out = [];
@@ -71,10 +87,10 @@ async function fetchTracked({ code, name, type, url, provenance = "官方直接�
     const response = await fetch(url, { ...options, headers: { "User-Agent": userAgent, Accept: format === "json" ? "application/json,text/plain,*/*" : "text/html,application/xhtml+xml,*/*", ...(options?.headers ?? {}) }, signal: AbortSignal.timeout(45000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = format === "json" ? await response.json() : await response.text();
-    sourceResults.push({ code, name, type, url: url.split("?ts=")[0], status: "成功", provenance, fetchedAt: beijingTimestamp(), records, latencyMs: Date.now() - started });
+    sourceResults.push({ code, name, type, url: url.split("?ts=")[0], status: "成功", provenance, fetchedAt: beijingTimestamp(), records, parserVersion: PARSER_VERSION, contentHash: hash(payload), latencyMs: Date.now() - started });
     return payload;
   } catch (error) {
-    sourceResults.push({ code, name, type, url: url.split("?ts=")[0], status: "失败·保留上次数据", provenance, fetchedAt: beijingTimestamp(), records: 0, error: error.message, latencyMs: Date.now() - started });
+    sourceResults.push({ code, name, type, url: url.split("?ts=")[0], status: "失败·保留上次数据", provenance, fetchedAt: beijingTimestamp(), records: 0, parserVersion: PARSER_VERSION, error: error.message, latencyMs: Date.now() - started });
   }
 }
 function metric(value, unit, summary, source) { return { value: String(value), unit, summary, source }; }
@@ -87,9 +103,20 @@ function trendFromCcer(rows) {
     return energy ? { date: isoDate(energy.business_date), ccer: num(energy.business_ave_price), volume: num(energy.business_amount) } : undefined;
   }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date));
 }
-function trendWindows(ccerTrend, cea) {
-  const make = (days, yearly = false) => ccerTrend.slice(-days).map((item) => ({ date: yearly ? item.date.slice(0, 7).replace("-", "/") : item.date.slice(5).replace("-", "/"), ccer: item.ccer, ...(item.date === cea?.tradeDate ? { cea: cea.close } : {}) }));
-  return { "近7日": make(7), "近30日": make(30), "近1年": make(365, true) };
+function mergeMarketHistory(previous, ccerTrend, cea) {
+  const rows = new Map((Array.isArray(previous) ? previous : []).map((item) => [item.date, item]));
+  for (const item of ccerTrend) rows.set(item.date, { ...(rows.get(item.date) ?? { date: item.date }), ccer: item.ccer, ccerVolume: item.volume });
+  if (cea?.tradeDate && cea?.close) rows.set(cea.tradeDate, { ...(rows.get(cea.tradeDate) ?? { date: cea.tradeDate }), cea: cea.close, ceaVolume: cea.volume, ceaTurnover: cea.turnover });
+  return [...rows.values()].sort((a, b) => a.date.localeCompare(b.date)).slice(-400);
+}
+function trendWindows(history) {
+  const daily = history.map((item) => ({ date: item.date.slice(5).replace("-", "/"), ...(item.cea !== undefined ? { cea: item.cea } : {}), ...(item.ccer !== undefined ? { ccer: item.ccer } : {}) }));
+  const monthly = new Map();
+  for (const item of history) {
+    const month = item.date.slice(0, 7).replace("-", "/");
+    monthly.set(month, { ...(monthly.get(month) ?? { date: month }), ...(item.cea !== undefined ? { cea: item.cea } : {}), ...(item.ccer !== undefined ? { ccer: item.ccer } : {}) });
+  }
+  return { "近7日": daily.slice(-7), "近30日": daily.slice(-30), "近1年": [...monthly.values()].slice(-12) };
 }
 async function registryQuery(dataType) {
   return fetchTracked({ code: `CCER-REG-${dataType}`, name: "全国CCER注册登记系统", type: `公开查询 ${dataType}`, url: URLS.ccerProjects, options: { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ dataType, pageNumber: 1, pageSize: 8 }) } });
@@ -98,6 +125,8 @@ async function registryQuery(dataType) {
 async function main() {
   const previousSnapshot = await previousJson(snapshotPath, { modules: {}, market: {} });
   const previousMarket = await previousJson(marketPath, {});
+  const previousRecords = await previousJson(recordsPath, []);
+  const previousMarketHistory = await previousJson(marketHistoryPath, []);
   const [ceaRaw, ccerRaw, registeredProjects, registeredReductions, publicProjects, publicReductions, methodsRaw, meeCarbonHtml, meeLocalHtml, zeroPolicyHtml, neaHtml, neaGreenHtml, ndrcHtml, ecbXml, weatherRaw] = await Promise.all([
     fetchTracked({ code: "CNEEEX", name: "上海环境能源交易所", type: "CEA日行情", url: URLS.cea }),
     fetchTracked({ code: "CCER-TRADE", name: "全国CCER交易系统", type: "CCER近90日行情", url: URLS.ccerTrade, records: 64, options: { headers: { Referer: URLS.ccerHome } } }),
@@ -177,12 +206,39 @@ async function main() {
     }, [record("07-24", "全国绿证核发及交易数据", `核发${greenIssued}亿个 · 交易${greenTraded}万个`, "国家能源局", URLS.neaGreen, "月度"), ...greenRecords]),
   };
 
+  const marketHistory = mergeMarketHistory(previousMarketHistory, ccerTrend, cea);
+  const fetchedAt = beijingTimestamp();
+  const currentRecordsRaw = Object.entries(modules).flatMap(([moduleName, dataset]) => dataset.records.map((item) => {
+    const publishedAt = publishedDate(item.date);
+    const key = naturalKey(moduleName, item);
+    const contentHash = hash({ moduleName, title: item.title, value: item.value, source: item.source, url: item.url, tag: item.tag, publishedAt: publishedAt ?? item.date });
+    const verificationStatus = item.url === "#" ? "待人工核验" : publishedAt ? "自动核验" : "来源已核验·发布时间待补";
+    return { ...item, module: moduleName, naturalKey: key, contentHash, publisher: item.source, publishedAt: publishedAt ?? null, fetchedAt, parserVersion: PARSER_VERSION, verificationStatus };
+  }));
+  const currentRecords = [...new Map(currentRecordsRaw.map((item) => [item.naturalKey, item])).values()];
+  const recordIndex = new Map(previousRecords.map((item) => [item.naturalKey, item]));
+  let addedCount = 0, updatedCount = 0;
+  for (const item of currentRecords) {
+    const previous = recordIndex.get(item.naturalKey);
+    if (!previous) {
+      addedCount += 1;
+      recordIndex.set(item.naturalKey, { ...item, firstSeenAt: fetchedAt, lastSeenAt: fetchedAt });
+    } else if (previous.contentHash !== item.contentHash) {
+      updatedCount += 1;
+      recordIndex.set(item.naturalKey, { ...previous, ...item, firstSeenAt: previous.firstSeenAt ?? previous.fetchedAt, lastSeenAt: fetchedAt });
+    } else {
+      recordIndex.set(item.naturalKey, { ...previous, lastSeenAt: fetchedAt });
+    }
+  }
+  const recordsDb = [...recordIndex.values()].sort((a, b) => String(b.publishedAt ?? b.date).localeCompare(String(a.publishedAt ?? a.date)));
+  const manualReviewCount = currentRecords.filter((item) => item.verificationStatus === "待人工核验").length;
+
   const failures = sourceResults.filter((x) => x.status.startsWith("失败")).length;
-  const snapshot = { version: 2, generatedAt, beijingTime: beijingTimestamp(), status: failures ? "partial" : "complete", collection: { moduleCount: 9, publicModuleCount: 8, protectedModuleCount: 1, sourceChecks: sourceResults.length, successCount: sourceResults.length - failures, failedCount: failures }, market: { cea, ccer, trend: ccerTrend.length ? trendWindows(ccerTrend, cea) : previousSnapshot.market?.trend ?? {} }, modules, sources: sourceResults };
+  const snapshot = { version: 3, parserVersion: PARSER_VERSION, generatedAt, beijingTime: beijingTimestamp(), status: failures ? "partial" : "complete", collection: { moduleCount: 9, publicModuleCount: 8, protectedModuleCount: 1, sourceChecks: sourceResults.length, successCount: sourceResults.length - failures, failedCount: failures, addedCount, updatedCount, manualReviewCount, totalRecordCount: recordsDb.length }, market: { cea, ccer, trend: marketHistory.length ? trendWindows(marketHistory) : previousSnapshot.market?.trend ?? {} }, modules, sources: sourceResults };
   const marketSnapshot = { generatedAt, beijingTime: snapshot.beijingTime, status: failures ? "partial" : "official-direct", source: { name: "全国碳市场公开交易系统", url: URLS.cea, provenance: "官方直接采集" }, cea, ccer };
   const previousLog = await previousJson(logPath, []);
   const logEntry = { generatedAt, beijingTime: snapshot.beijingTime, status: snapshot.status, ...snapshot.collection };
-  await Promise.all([writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8"), writeFile(marketPath, `${JSON.stringify(marketSnapshot, null, 2)}\n`, "utf8"), writeFile(logPath, `${JSON.stringify([logEntry, ...previousLog].slice(0, 60), null, 2)}\n`, "utf8")]);
+  await Promise.all([writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8"), writeFile(marketPath, `${JSON.stringify(marketSnapshot, null, 2)}\n`, "utf8"), writeFile(recordsPath, `${JSON.stringify(recordsDb, null, 2)}\n`, "utf8"), writeFile(marketHistoryPath, `${JSON.stringify(marketHistory, null, 2)}\n`, "utf8"), writeFile(logPath, `${JSON.stringify([logEntry, ...previousLog].slice(0, 60), null, 2)}\n`, "utf8")]);
   console.log(`Collected ${snapshot.collection.successCount}/${snapshot.collection.sourceChecks} sources across 9 modules at ${snapshot.beijingTime} CST.`);
   if (failures) console.log(`${failures} source check(s) failed safely; successful data and module fallbacks were preserved.`);
 }
