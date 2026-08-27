@@ -1,8 +1,8 @@
 {
   "version": 3,
   "parserVersion": "2026.08.21-v3",
-  "generatedAt": "2026-08-26T10:05:29.175Z",
-  "beijingTime": "2026-08-26 18:05",
+  "generatedAt": "2026-08-27T19:55:20.222Z",
+  "beijingTime": "2026-08-28 03:55",
   "status": "complete",
   "collection": {
     "moduleCount": 9,
@@ -11,36 +11,32 @@
     "sourceChecks": 15,
     "successCount": 15,
     "failedCount": 0,
-    "addedCount": 7,
+    "addedCount": 5,
     "updatedCount": 1,
     "manualReviewCount": 1,
-    "totalRecordCount": 67
+    "totalRecordCount": 72
   },
   "market": {
     "cea": {
-      "tradeDate": "2026-08-26",
+      "tradeDate": "2026-08-27",
       "close": 98.52,
-      "changePct": 0.2,
-      "open": 98.2,
-      "high": 98.6,
-      "low": 98,
-      "volume": "294.74万吨",
-      "turnover": "2.65亿元",
+      "changePct": 0,
+      "open": 98.3,
+      "high": 98.8,
+      "low": 98.3,
+      "volume": "164.57万吨",
+      "turnover": "1.58亿元",
       "unit": "元/吨"
     },
     "ccer": {
-      "tradeDate": "2026-08-26",
-      "average": 96.94,
-      "volumeTco2e": 65887,
-      "changePct": 0.4,
+      "tradeDate": "2026-08-27",
+      "average": 96.6,
+      "volumeTco2e": 100827,
+      "changePct": -0.35,
       "unit": "元/吨"
     },
     "trend": {
       "近7日": [
-        {
-          "date": "08/18",
-          "ccer": 96.2
-        },
         {
           "date": "08/19",
           "ccer": 93.54
@@ -69,13 +65,14 @@
           "date": "08/26",
           "cea": 98.52,
           "ccer": 96.94
+        },
+        {
+          "date": "08/27",
+          "cea": 98.52,
+          "ccer": 96.6
         }
       ],
       "近30日": [
-        {
-          "date": "07/16",
-          "ccer": 83.61
-        },
         {
           "date": "07/17",
           "ccer": 89.91
@@ -196,6 +193,11 @@
           "date": "08/26",
           "cea": 98.52,
           "ccer": 96.94
+        },
+        {
+          "date": "08/27",
+          "cea": 98.52,
+          "ccer": 96.6
         }
       ],
       "近1年": [
@@ -213,7 +215,7 @@
         },
         {
           "date": "2026/08",
-          "ccer": 96.94,
+          "ccer": 96.6,
           "cea": 98.52
         }
       ]
@@ -226,13 +228,13 @@
         "全国CEA日行情": {
           "value": "98.52",
           "unit": "元/吨",
-          "summary": "2026-08-26收盘；当日成交294.74万吨",
+          "summary": "2026-08-27收盘；当日成交164.57万吨",
           "source": "上海环境能源交易所"
         },
         "全国CCER日行情": {
-          "value": "96.94",
+          "value": "96.60",
           "unit": "元/吨",
-          "summary": "2026-08-26成交均价；成交65,887吨",
+          "summary": "2026-08-27成交均价；成交100,827吨",
           "source": "全国CCER交易系统"
         },
         "区域试点碳市场": {
@@ -242,13 +244,13 @@
           "source": "地方交易机构"
         },
         "成交量与成交额": {
-          "value": "294.74万吨",
+          "value": "164.57万吨",
           "unit": "CEA",
-          "summary": "成交额2.65亿元",
+          "summary": "成交额1.58亿元",
           "source": "上海环境能源交易所"
         },
         "价差与基差": {
-          "value": "1.58",
+          "value": "1.92",
           "unit": "元/吨",
           "summary": "CEA收盘价减CCER成交均价。",
           "source": "平台计算"
@@ -262,17 +264,17 @@
       },
       "records": [
         {
-          "date": "08-26",
+          "date": "08-27",
           "title": "全国CEA日行情",
-          "value": "98.52元/吨 · 294.74万吨",
+          "value": "98.52元/吨 · 164.57万吨",
           "source": "上海环境能源交易所",
           "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
           "tag": "CEA"
         },
         {
-          "date": "08-26",
+          "date": "08-27",
           "title": "全国CCER日行情",
-          "value": "96.94元/吨 · 65,887吨",
+          "value": "96.60元/吨 · 100,827吨",
           "source": "全国CCER交易系统",
           "url": "https://www.ccer.com.cn/",
           "tag": "CCER"
@@ -648,15 +650,15 @@
           "source": "国家能源局"
         },
         "气温与降水": {
-          "value": "26℃ / 0mm",
+          "value": "22.5℃ / 0mm",
           "unit": "北京代表点",
-          "summary": "10米风速5.8km/h。",
+          "summary": "10米风速0.4km/h。",
           "source": "Open-Meteo"
         },
         "宏观指标": {
-          "value": "7.8366",
+          "value": "7.8258",
           "unit": "EUR/CNY",
-          "summary": "ECB 2026-08-25参考汇率；EUR/USD 1.1662。",
+          "summary": "ECB 2026-08-27参考汇率；EUR/USD 1.1645。",
           "source": "欧洲中央银行"
         },
         "EUA联动": {
@@ -674,9 +676,9 @@
       },
       "records": [
         {
-          "date": "08-25",
+          "date": "08-27",
           "title": "欧洲中央银行参考汇率",
-          "value": "EUR/CNY 7.8366 · EUR/USD 1.1662",
+          "value": "EUR/CNY 7.8258 · EUR/USD 1.1645",
           "source": "欧洲中央银行",
           "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
           "tag": "汇率"
@@ -684,7 +686,7 @@
         {
           "date": "当前",
           "title": "北京代表点气象",
-          "value": "26℃ · 降水0mm · 风速5.8km/h",
+          "value": "22.5℃ · 降水0mm · 风速0.4km/h",
           "source": "Open-Meteo",
           "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
           "tag": "气象"
@@ -914,7 +916,7 @@
           "source": "国家能源局"
         },
         "绿电交易": {
-          "value": "3",
+          "value": "2",
           "unit": "条动态",
           "summary": "本次国家能源局公开页面匹配结果。",
           "source": "国家能源局"
@@ -958,6 +960,22 @@
           "tag": "绿电"
         },
         {
+          "date": "08-27",
+          "title": "2026年7月中国绿证价格指数",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260827/49fc6ada6cba44a9984d9839d22b4944/c.html",
+          "tag": "绿证"
+        },
+        {
+          "date": "08-27",
+          "title": "2026年1—7月全国电力市场交易电量同比增长23.4%",
+          "value": "绿电绿证/电力市场动态",
+          "source": "国家能源局",
+          "url": "https://www.nea.gov.cn/20260827/86a3984d71804083b3ddabc50d74068a/c.html",
+          "tag": "绿电"
+        },
+        {
           "date": "08-26",
           "title": "国家能源局发布2026年7月全国可再生能源绿色电力证书核发及交易数据",
           "value": "绿电绿证/电力市场动态",
@@ -988,39 +1006,23 @@
           "source": "国家能源局",
           "url": "https://www.nea.gov.cn/20260723/cab1eb6727674bcf9a0efea45ed525e0/c.html",
           "tag": "绿电"
-        },
-        {
-          "date": "08-17",
-          "title": "国家能源局组织召开全国可再生能源电力开发建设月度（7月）调度视频会",
-          "value": "绿电绿证/电力市场动态",
-          "source": "国家能源局",
-          "url": "https://www.nea.gov.cn/20260817/3b9aadf9d3e540879aa8e1d15405ff71/c.html",
-          "tag": "绿电"
-        },
-        {
-          "date": "08-17",
-          "title": "虚拟电厂：让绿电“发得出”又“用得好”",
-          "value": "绿电绿证/电力市场动态",
-          "source": "国家能源局",
-          "url": "https://www.nea.gov.cn/20260817/10ef4d7abc264738ba1dbd868863cd72/c.html",
-          "tag": "绿电"
         }
       ]
     }
   },
   "sources": [
     {
-      "code": "MEE-LOCAL",
-      "name": "生态环境部地方动态",
-      "type": "园区与工厂动态",
-      "url": "https://www.mee.gov.cn/ywdt/dfnews/",
+      "code": "CCER-TRADE",
+      "name": "全国CCER交易系统",
+      "type": "CCER近90日行情",
+      "url": "https://www.ccer.com.cn/wcm/ccer/data/90-first.json",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 8,
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 64,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "be147070bbd7abbbdc89d8a916dda26be2fb51fae47f2c3a9fbf2dd48f52fc71",
-      "latencyMs": 1306
+      "contentHash": "7c233e940c50a934aa8379e2e5126c3c76f326fe209b85fea6c8ad836bc0d78f",
+      "latencyMs": 1363
     },
     {
       "code": "MEE-CARBON",
@@ -1029,37 +1031,11 @@
       "url": "https://www.mee.gov.cn/ywgz/ydqhbh/wsqtkz/",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 8,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "bb9996286482b001e87aa8ae26e00f8d494d505fd9aee974ba95c2e896f7c257",
-      "latencyMs": 1457
-    },
-    {
-      "code": "CNEEEX",
-      "name": "上海环境能源交易所",
-      "type": "CEA日行情",
-      "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 1,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "b0c523c61e1c75deec4e6830a230eca5d95f2cd7ad0a98a29be1ba0cb23eb492",
-      "latencyMs": 1699
-    },
-    {
-      "code": "CCER-TRADE",
-      "name": "全国CCER交易系统",
-      "type": "CCER近90日行情",
-      "url": "https://www.ccer.com.cn/wcm/ccer/data/90-first.json",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 64,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "24716ea35fb05f53845e00316eced9ffc79e7c50f838fb5ad22b7116ea1f3efe",
-      "latencyMs": 1726
+      "latencyMs": 1368
     },
     {
       "code": "ZERO-POLICY",
@@ -1068,50 +1044,37 @@
       "url": "https://www.mee.gov.cn/zcwj/gwywj/202607/t20260714_1161655.shtml",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "51c917997023631a606a87e9a900b2f5d446e222ccffb201377a011e3b3bea2a",
-      "latencyMs": 1728
+      "latencyMs": 1461
     },
     {
-      "code": "CCER-METHOD",
-      "name": "全国CCER注册登记系统",
-      "type": "方法学清单",
-      "url": "https://ccer.cets.org.cn/api/methodology/host/methodologVisit/20",
+      "code": "MEE-LOCAL",
+      "name": "生态环境部地方动态",
+      "type": "园区与工厂动态",
+      "url": "https://www.mee.gov.cn/ywdt/dfnews/",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 12,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "47e0ca8915ac790847a9046f48012d5e56a2e635fa41d49d61bead88ba38a533",
-      "latencyMs": 2018
-    },
-    {
-      "code": "NEA",
-      "name": "国家能源局",
-      "type": "绿电绿证与电力",
-      "url": "https://www.nea.gov.cn/",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 8,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "de06e25481ae4cc32694a7c3c353f9ae5060e1468926dc60fc1566b19262cd36",
-      "latencyMs": 2090
+      "contentHash": "be147070bbd7abbbdc89d8a916dda26be2fb51fae47f2c3a9fbf2dd48f52fc71",
+      "latencyMs": 1467
     },
     {
-      "code": "NDRC",
-      "name": "国家发展改革委",
-      "type": "能源与宏观政策",
-      "url": "https://www.ndrc.gov.cn/",
+      "code": "CNEEEX",
+      "name": "上海环境能源交易所",
+      "type": "CEA日行情",
+      "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 8,
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 1,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "bb28e671d5e644bfb0302fcd442d77d3ff8c010319a96866dae7dd75676ecf52",
-      "latencyMs": 2110
+      "contentHash": "1c634ee2e65d86c5096fec2602df552c860c7d352a9ed586965b7a867d9454dd",
+      "latencyMs": 1644
     },
     {
       "code": "NEA-GREEN",
@@ -1120,24 +1083,50 @@
       "url": "https://www.nea.gov.cn/20260724/d35b8a39fb724572b3d3ce3cbed9d4e9/c.html",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "942cf18a31d3a5468eaa447bed310b8956839d0f34edc0a60cbd8017f5aebcbc",
-      "latencyMs": 2168
+      "latencyMs": 1680
     },
     {
-      "code": "ECB",
-      "name": "欧洲中央银行",
-      "type": "欧元汇率",
-      "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+      "code": "CCER-METHOD",
+      "name": "全国CCER注册登记系统",
+      "type": "方法学清单",
+      "url": "https://ccer.cets.org.cn/api/methodology/host/methodologVisit/20",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
-      "records": 1,
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 12,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "8cfa08d8b7f6729fb17cb5c6d15df45129dd747ae45d14e74ee71811a5929497",
-      "latencyMs": 2203
+      "contentHash": "47e0ca8915ac790847a9046f48012d5e56a2e635fa41d49d61bead88ba38a533",
+      "latencyMs": 1872
+    },
+    {
+      "code": "NEA",
+      "name": "国家能源局",
+      "type": "绿电绿证与电力",
+      "url": "https://www.nea.gov.cn/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 8,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "e2a98423992c9adae16ced630327d27ece874dbd292b01c9deb27f370e8b3f0f",
+      "latencyMs": 1886
+    },
+    {
+      "code": "NDRC",
+      "name": "国家发展改革委",
+      "type": "能源与宏观政策",
+      "url": "https://www.ndrc.gov.cn/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 8,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "e1b1f93a8cedc8885e2c5cb7ed5c7d25b17ded5f648cc420652da6194610a6e7",
+      "latencyMs": 2022
     },
     {
       "code": "OPEN-METEO",
@@ -1146,24 +1135,24 @@
       "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "1a8452ab0b1e5a37b9607e9ee8e52e7a508ffddd5d5512e8fa8ea09cf1573a89",
-      "latencyMs": 2398
+      "contentHash": "6fcf006bd6c911cfbf098ad8f5b5bb59f8965a52aac88ad04c1f6c604a813d74",
+      "latencyMs": 2154
     },
     {
-      "code": "CCER-REG-2",
-      "name": "全国CCER注册登记系统",
-      "type": "公开查询 2",
-      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "code": "ECB",
+      "name": "欧洲中央银行",
+      "type": "欧元汇率",
+      "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "4f30a3d8712fe49c13df3101895b9d26b3ced13679c57a11f9e05ec48712e604",
-      "latencyMs": 3008
+      "contentHash": "44896cfbb9b25361415c36a14c749d95142148293fb2ba0682f1033a6c021bf8",
+      "latencyMs": 2182
     },
     {
       "code": "CCER-REG-4",
@@ -1172,11 +1161,24 @@
       "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "9b24c0fdb835714e2fa56bef1a962a21f8eb2f7ff568a2253307621f3596469c",
-      "latencyMs": 3053
+      "latencyMs": 2844
+    },
+    {
+      "code": "CCER-REG-2",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 2",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-08-28 03:55",
+      "records": 1,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "4f30a3d8712fe49c13df3101895b9d26b3ced13679c57a11f9e05ec48712e604",
+      "latencyMs": 2849
     },
     {
       "code": "CCER-REG-1",
@@ -1185,11 +1187,11 @@
       "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "bfd94efd5b731fa2fbaa08c7bd2a36699dd75126fad2713ebc8f45f33d505044",
-      "latencyMs": 3245
+      "latencyMs": 3048
     },
     {
       "code": "CCER-REG-3",
@@ -1198,11 +1200,11 @@
       "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-08-26 18:05",
+      "fetchedAt": "2026-08-28 03:55",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "88693080ab933ad5c7f0bc4641d6758b232ae9e6345cfb3e37c59b0bfc84ca87",
-      "latencyMs": 3248
+      "latencyMs": 3063
     }
   ]
 }
