@@ -1,8 +1,8 @@
 {
   "version": 3,
   "parserVersion": "2026.08.21-v3",
-  "generatedAt": "2026-09-05T12:54:36.780Z",
-  "beijingTime": "2026-09-05 20:54",
+  "generatedAt": "2026-09-06T13:01:50.886Z",
+  "beijingTime": "2026-09-06 21:01",
   "status": "partial",
   "collection": {
     "moduleCount": 9,
@@ -11,7 +11,7 @@
     "sourceChecks": 15,
     "successCount": 14,
     "failedCount": 1,
-    "addedCount": 1,
+    "addedCount": 0,
     "updatedCount": 1,
     "manualReviewCount": 1,
     "totalRecordCount": 99
@@ -660,9 +660,9 @@
           "source": "国家能源局"
         },
         "气温与降水": {
-          "value": "28.3℃ / 0mm",
+          "value": "27.9℃ / 0mm",
           "unit": "北京代表点",
-          "summary": "10米风速6.1km/h。",
+          "summary": "10米风速8.5km/h。",
           "source": "Open-Meteo"
         },
         "宏观指标": {
@@ -696,7 +696,7 @@
         {
           "date": "当前",
           "title": "北京代表点气象",
-          "value": "28.3℃ · 降水0mm · 风速6.1km/h",
+          "value": "27.9℃ · 降水0mm · 风速8.5km/h",
           "source": "Open-Meteo",
           "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
           "tag": "气象"
@@ -1028,24 +1028,11 @@
       "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
       "status": "失败·保留上次数据",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 0,
       "parserVersion": "2026.08.21-v3",
       "error": "HTTP 502",
-      "latencyMs": 1070
-    },
-    {
-      "code": "MEE-LOCAL",
-      "name": "生态环境部地方动态",
-      "type": "园区与工厂动态",
-      "url": "https://www.mee.gov.cn/ywdt/dfnews/",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 8,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "60a451eec7e07ce8c6c7aa0ae6d3dc71d344262fbcb513d5e1d4f73f114974e5",
-      "latencyMs": 1495
+      "latencyMs": 1577
     },
     {
       "code": "MEE-CARBON",
@@ -1054,11 +1041,24 @@
       "url": "https://www.mee.gov.cn/ywgz/ydqhbh/wsqtkz/",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 8,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "cee8ef26a8fdc2f98e7be70a8e716985929ade98a3dfa8ae310cfc93bf156b7c",
-      "latencyMs": 1498
+      "latencyMs": 1874
+    },
+    {
+      "code": "MEE-LOCAL",
+      "name": "生态环境部地方动态",
+      "type": "园区与工厂动态",
+      "url": "https://www.mee.gov.cn/ywdt/dfnews/",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 8,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "fabb863b9aa3413091044a2bdb2d7bc826cc6eb2744e1333ccbedcddb9a774cf",
+      "latencyMs": 1906
     },
     {
       "code": "ZERO-POLICY",
@@ -1067,24 +1067,11 @@
       "url": "https://www.mee.gov.cn/zcwj/gwywj/202607/t20260714_1161655.shtml",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "51c917997023631a606a87e9a900b2f5d446e222ccffb201377a011e3b3bea2a",
-      "latencyMs": 1500
-    },
-    {
-      "code": "CCER-TRADE",
-      "name": "全国CCER交易系统",
-      "type": "CCER近90日行情",
-      "url": "https://www.ccer.com.cn/wcm/ccer/data/90-first.json",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 64,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "f0dc3bc290b2cfc8ff8ba4ce2a9019abf197a90c4e69ff9f078f2a01ce6598ad",
-      "latencyMs": 1780
+      "latencyMs": 1907
     },
     {
       "code": "CCER-METHOD",
@@ -1093,11 +1080,24 @@
       "url": "https://ccer.cets.org.cn/api/methodology/host/methodologVisit/20",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 12,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "47e0ca8915ac790847a9046f48012d5e56a2e635fa41d49d61bead88ba38a533",
-      "latencyMs": 1837
+      "latencyMs": 2253
+    },
+    {
+      "code": "CCER-TRADE",
+      "name": "全国CCER交易系统",
+      "type": "CCER近90日行情",
+      "url": "https://www.ccer.com.cn/wcm/ccer/data/90-first.json",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 64,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "f0dc3bc290b2cfc8ff8ba4ce2a9019abf197a90c4e69ff9f078f2a01ce6598ad",
+      "latencyMs": 2264
     },
     {
       "code": "NEA-GREEN",
@@ -1106,37 +1106,11 @@
       "url": "https://www.nea.gov.cn/20260724/d35b8a39fb724572b3d3ce3cbed9d4e9/c.html",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "942cf18a31d3a5468eaa447bed310b8956839d0f34edc0a60cbd8017f5aebcbc",
-      "latencyMs": 2151
-    },
-    {
-      "code": "NEA",
-      "name": "国家能源局",
-      "type": "绿电绿证与电力",
-      "url": "https://www.nea.gov.cn/",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 8,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "a229ecb7b403a366bceb381874d7fa8e519488a617a4f51cbe6353024a24f99d",
-      "latencyMs": 2245
-    },
-    {
-      "code": "NDRC",
-      "name": "国家发展改革委",
-      "type": "能源与宏观政策",
-      "url": "https://www.ndrc.gov.cn/",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 8,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "7e2226e39108511c9e5eaabcb07d23797ae2050953bc3869a0683bb3bf2765c1",
-      "latencyMs": 2987
+      "latencyMs": 2571
     },
     {
       "code": "OPEN-METEO",
@@ -1145,24 +1119,11 @@
       "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "299cc538370d5f6b2c14b9e227c7ccd0230c46a739767299e505b0de4dfb3b6e",
-      "latencyMs": 3325
-    },
-    {
-      "code": "CCER-REG-2",
-      "name": "全国CCER注册登记系统",
-      "type": "公开查询 2",
-      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
-      "status": "成功",
-      "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 1,
-      "parserVersion": "2026.08.21-v3",
-      "contentHash": "a319936c4e93f3a2d5e123078b855ed9a393b575b2718ee1c2ba42484da8d794",
-      "latencyMs": 4675
+      "contentHash": "8c4d96ad71608389ae60c3808546d8be3521003473b91edf901976a3bda45ef9",
+      "latencyMs": 2576
     },
     {
       "code": "ECB",
@@ -1171,37 +1132,37 @@
       "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "f5f7e00783f584ef5b0af328e5677b98aa21f9939473b38312299d0f412ddfbf",
-      "latencyMs": 4735
+      "latencyMs": 2598
     },
     {
-      "code": "CCER-REG-4",
-      "name": "全国CCER注册登记系统",
-      "type": "公开查询 4",
-      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "code": "NEA",
+      "name": "国家能源局",
+      "type": "绿电绿证与电力",
+      "url": "https://www.nea.gov.cn/",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 1,
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 8,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "9b24c0fdb835714e2fa56bef1a962a21f8eb2f7ff568a2253307621f3596469c",
-      "latencyMs": 5081
+      "contentHash": "a229ecb7b403a366bceb381874d7fa8e519488a617a4f51cbe6353024a24f99d",
+      "latencyMs": 2661
     },
     {
-      "code": "CCER-REG-1",
-      "name": "全国CCER注册登记系统",
-      "type": "公开查询 1",
-      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "code": "NDRC",
+      "name": "国家发展改革委",
+      "type": "能源与宏观政策",
+      "url": "https://www.ndrc.gov.cn/",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
-      "records": 1,
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 8,
       "parserVersion": "2026.08.21-v3",
-      "contentHash": "1856230a61ebac09e1f36d679961c785ec32db2f6a9cc0e6a8ba9e664eabdfcd",
-      "latencyMs": 6646
+      "contentHash": "7e2226e39108511c9e5eaabcb07d23797ae2050953bc3869a0683bb3bf2765c1",
+      "latencyMs": 3048
     },
     {
       "code": "CCER-REG-3",
@@ -1210,11 +1171,50 @@
       "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
       "status": "成功",
       "provenance": "官方直接采集",
-      "fetchedAt": "2026-09-05 20:54",
+      "fetchedAt": "2026-09-06 21:01",
       "records": 1,
       "parserVersion": "2026.08.21-v3",
       "contentHash": "986a391222b9265176c0829403b91a6a09432bbdb46a14c15290d1f1528743b3",
-      "latencyMs": 6649
+      "latencyMs": 3722
+    },
+    {
+      "code": "CCER-REG-4",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 4",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 1,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "9b24c0fdb835714e2fa56bef1a962a21f8eb2f7ff568a2253307621f3596469c",
+      "latencyMs": 3724
+    },
+    {
+      "code": "CCER-REG-2",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 2",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 1,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "a319936c4e93f3a2d5e123078b855ed9a393b575b2718ee1c2ba42484da8d794",
+      "latencyMs": 3728
+    },
+    {
+      "code": "CCER-REG-1",
+      "name": "全国CCER注册登记系统",
+      "type": "公开查询 1",
+      "url": "https://ccer.cets.org.cn/api/projectmanage/open/getOpeningApply",
+      "status": "成功",
+      "provenance": "官方直接采集",
+      "fetchedAt": "2026-09-06 21:01",
+      "records": 1,
+      "parserVersion": "2026.08.21-v3",
+      "contentHash": "1856230a61ebac09e1f36d679961c785ec32db2f6a9cc0e6a8ba9e664eabdfcd",
+      "latencyMs": 3727
     }
   ]
 }
