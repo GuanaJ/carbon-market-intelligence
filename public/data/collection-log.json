@@ -1,5 +1,20 @@
 [
   {
+    "generatedAt": "2026-09-11T13:42:41.503Z",
+    "beijingTime": "2026-09-11 21:42",
+    "status": "partial",
+    "moduleCount": 9,
+    "publicModuleCount": 8,
+    "protectedModuleCount": 1,
+    "sourceChecks": 15,
+    "successCount": 14,
+    "failedCount": 1,
+    "addedCount": 8,
+    "updatedCount": 1,
+    "manualReviewCount": 1,
+    "totalRecordCount": 122
+  },
+  {
     "generatedAt": "2026-09-10T13:44:39.349Z",
     "beijingTime": "2026-09-10 21:44",
     "status": "partial",
