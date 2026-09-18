@@ -436,24 +436,40 @@
     "date": "2026-09-14",
     "cea": 95.64,
     "ceaVolume": "94.34万吨",
-    "ceaTurnover": "8,805.32万元"
+    "ceaTurnover": "8,805.32万元",
+    "ccer": 95.07,
+    "ccerVolume": 56021
   },
   {
     "date": "2026-09-15",
     "cea": 96.23,
     "ceaVolume": "69.85万吨",
-    "ceaTurnover": "6,708.74万元"
+    "ceaTurnover": "6,708.74万元",
+    "ccer": 94.2,
+    "ccerVolume": 310000
   },
   {
     "date": "2026-09-16",
     "cea": 95.89,
     "ceaVolume": "162.39万吨",
-    "ceaTurnover": "1.44亿元"
+    "ceaTurnover": "1.44亿元",
+    "ccer": 94.99,
+    "ccerVolume": 52700
   },
   {
     "date": "2026-09-17",
     "cea": 95.89,
     "ceaVolume": "160.71万吨",
-    "ceaTurnover": "1.51亿元"
+    "ceaTurnover": "1.51亿元",
+    "ccer": 95.18,
+    "ccerVolume": 22000
+  },
+  {
+    "date": "2026-09-18",
+    "ccer": 90.76,
+    "ccerVolume": 313636,
+    "cea": 95.63,
+    "ceaVolume": "88.10万吨",
+    "ceaTurnover": "8,412.98万元"
   }
 ]
