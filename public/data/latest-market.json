@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-28T17:46:23.558Z",
-  "beijingTime": "2026-09-29 01:46",
+  "generatedAt": "2026-09-29T16:03:03.736Z",
+  "beijingTime": "2026-09-30 00:03",
   "status": "official-direct",
   "source": {
     "name": "全国碳市场公开交易系统",
@@ -8,21 +8,21 @@
     "provenance": "官方直接采集"
   },
   "cea": {
-    "tradeDate": "2026-09-28",
-    "close": 94.8,
-    "changePct": -0.2,
+    "tradeDate": "2026-09-29",
+    "close": 94.88,
+    "changePct": 0.08,
     "open": 94.5,
     "high": 95,
     "low": 94.5,
-    "volume": "184.65万吨",
-    "turnover": "1.73亿元",
+    "volume": "175.26万吨",
+    "turnover": "1.60亿元",
     "unit": "元/吨"
   },
   "ccer": {
-    "tradeDate": "2026-09-28",
-    "average": 88.16,
-    "volumeTco2e": 352,
-    "changePct": -1.84,
+    "tradeDate": "2026-09-29",
+    "average": 93.33,
+    "volumeTco2e": 14028,
+    "changePct": 5.86,
     "unit": "元/吨"
   }
 }
