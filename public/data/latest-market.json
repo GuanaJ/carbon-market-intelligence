@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-10-13T17:05:09.541Z",
-  "beijingTime": "2026-10-14 01:05",
-  "status": "partial",
+  "generatedAt": "2026-10-14T14:36:40.720Z",
+  "beijingTime": "2026-10-14 22:36",
+  "status": "official-direct",
   "source": {
     "name": "全国碳市场公开交易系统",
     "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
     "provenance": "官方直接采集"
   },
   "cea": {
-    "tradeDate": "2026-10-13",
-    "close": 98.25,
-    "changePct": -0.15,
-    "open": 99,
-    "high": 99,
-    "low": 97.8,
-    "volume": "297.34万吨",
-    "turnover": "2.88亿元",
+    "tradeDate": "2026-10-14",
+    "close": 98.14,
+    "changePct": -0.11,
+    "open": 99.5,
+    "high": 99.5,
+    "low": 97.9,
+    "volume": "108.80万吨",
+    "turnover": "1.07亿元",
     "unit": "元/吨"
   },
   "ccer": {
-    "tradeDate": "2026-10-09",
-    "average": 95.26,
-    "volumeTco2e": 36995,
-    "changePct": 0.06,
+    "tradeDate": "2026-10-14",
+    "average": 97.16,
+    "volumeTco2e": 80000,
+    "changePct": -0.31,
     "unit": "元/吨"
   }
 }
