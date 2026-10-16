@@ -572,6 +572,16 @@
     "date": "2026-10-15",
     "cea": 97.18,
     "ceaVolume": "93.65万吨",
-    "ceaTurnover": "9,100.99万元"
+    "ceaTurnover": "9,100.99万元",
+    "ccer": 96.93,
+    "ccerVolume": 30005
+  },
+  {
+    "date": "2026-10-16",
+    "ccer": 96.84,
+    "ccerVolume": 70000,
+    "cea": 97.56,
+    "ceaVolume": "201.59万吨",
+    "ceaTurnover": "1.95亿元"
   }
 ]
