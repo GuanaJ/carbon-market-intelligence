@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-30T16:07:42.136Z",
-  "beijingTime": "2026-10-31 00:07",
-  "status": "partial",
+  "generatedAt": "2026-10-31T15:27:07.665Z",
+  "beijingTime": "2026-10-31 23:27",
+  "status": "official-direct",
   "source": {
     "name": "全国碳市场公开交易系统",
     "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
@@ -19,10 +19,10 @@
     "unit": "元/吨"
   },
   "ccer": {
-    "tradeDate": "2026-10-29",
-    "average": 96.72,
-    "volumeTco2e": 110503,
-    "changePct": 0.84,
+    "tradeDate": "2026-10-30",
+    "average": 95.3,
+    "volumeTco2e": 20000,
+    "changePct": -1.47,
     "unit": "元/吨"
   }
 }
