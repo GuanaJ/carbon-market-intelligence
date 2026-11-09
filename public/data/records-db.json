@@ -15,7 +15,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "待人工核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -128,20 +128,20 @@
   {
     "date": "当前",
     "title": "北京代表点气象",
-    "value": "0.7℃ · 降水0mm · 风速4.6km/h",
+    "value": "0.6℃ · 降水0mm · 风速3.2km/h",
     "source": "Open-Meteo",
     "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9&longitude=116.4&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FShanghai",
     "tag": "气象",
     "module": "碳价外部影响因素",
     "naturalKey": "40d8be334a55af18681ecb043fd1ba37",
-    "contentHash": "9eb5f1f3af19c4b8e74721927c81f40a3c8c022d23d9487b8579acd89bd49c0a",
+    "contentHash": "b83f130071c6bd928d774f6ccfadd9ce918413e82dbab611448cda47bbe13c5b",
     "publisher": "Open-Meteo",
     "publishedAt": null,
-    "fetchedAt": "2026-11-09 00:08",
+    "fetchedAt": "2026-11-10 03:57",
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -195,7 +195,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-09-11 21:42",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -213,7 +213,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-09-17 22:23",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -231,7 +231,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-09-23 22:19",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -249,7 +249,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-10-27 00:15",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -267,7 +267,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-11-03 03:40",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -285,7 +285,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-11-06 01:31",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "当前",
@@ -303,7 +303,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-11-07 00:52",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "12-26",
@@ -378,6 +378,96 @@
     "lastSeenAt": "2026-09-02 21:46"
   },
   {
+    "date": "11-09",
+    "title": "全国CEA日行情",
+    "value": "93.36元/吨 · 186.20万吨",
+    "source": "上海环境能源交易所",
+    "url": "https://shyx.cneeex.com/assets/json/dailyov.json",
+    "tag": "CEA",
+    "module": "市场行情数据库",
+    "naturalKey": "1e54c7a73ce8ae61e3ec9d380c87e634",
+    "contentHash": "c3cc61f8ecfd2504863b82e2a159a09789fe1fe8fc83c961e59559efc3f59948",
+    "publisher": "上海环境能源交易所",
+    "publishedAt": "2026-11-09",
+    "fetchedAt": "2026-11-10 03:57",
+    "parserVersion": "2026.08.21-v3",
+    "verificationStatus": "自动核验",
+    "firstSeenAt": "2026-11-10 03:57",
+    "lastSeenAt": "2026-11-10 03:57"
+  },
+  {
+    "date": "11-09",
+    "title": "全国CCER日行情",
+    "value": "94.07元/吨 · 1,365,134吨",
+    "source": "全国CCER交易系统",
+    "url": "https://www.ccer.com.cn/",
+    "tag": "CCER",
+    "module": "市场行情数据库",
+    "naturalKey": "167ff7cca0e20dbc281250e830680512",
+    "contentHash": "c6e990e5d9e3f35ad971f95d0bb1ba3b19ea0729ccfa9079afe1e52c2ca411a2",
+    "publisher": "全国CCER交易系统",
+    "publishedAt": "2026-11-09",
+    "fetchedAt": "2026-11-10 03:57",
+    "parserVersion": "2026.08.21-v3",
+    "verificationStatus": "自动核验",
+    "firstSeenAt": "2026-11-10 03:57",
+    "lastSeenAt": "2026-11-10 03:57"
+  },
+  {
+    "date": "11-09",
+    "title": "关于发布《温室气体自愿减排项目方法学 乔木林经营碳汇（CCER—13—001—V01）》等2项方法学的通知",
+    "value": "配额/履约公开信息",
+    "source": "生态环境部",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202611/t20261109_1185815.html",
+    "tag": "履约",
+    "module": "配额供需与履约",
+    "naturalKey": "1e554b4aff9a5fd6b1a23d20f69b7b39",
+    "contentHash": "f7111fd6a694381a20c905abc4c5a2114faae4a50e0c76299da3d495f7db2a92",
+    "publisher": "生态环境部",
+    "publishedAt": "2026-11-09",
+    "fetchedAt": "2026-11-10 03:57",
+    "parserVersion": "2026.08.21-v3",
+    "verificationStatus": "自动核验",
+    "firstSeenAt": "2026-11-10 03:57",
+    "lastSeenAt": "2026-11-10 03:57"
+  },
+  {
+    "date": "11-09",
+    "title": "关于发布《温室气体自愿减排项目方法学 乔木林经营碳汇（CCER—13—001—V01）》等2项方法学的通知",
+    "value": "政策/市场规则更新",
+    "source": "生态环境部",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202611/t20261109_1185815.html",
+    "tag": "政策",
+    "module": "政策与市场事件",
+    "naturalKey": "cd624f24a69529940599752343bb7359",
+    "contentHash": "caa5b2df9f508298a3b75b1c3d1fb7755cdcfdef0d322618e459c2a35741d62a",
+    "publisher": "生态环境部",
+    "publishedAt": "2026-11-09",
+    "fetchedAt": "2026-11-10 03:57",
+    "parserVersion": "2026.08.21-v3",
+    "verificationStatus": "自动核验",
+    "firstSeenAt": "2026-11-10 03:57",
+    "lastSeenAt": "2026-11-10 03:57"
+  },
+  {
+    "date": "11-09",
+    "title": "欧洲中央银行参考汇率",
+    "value": "EUR/CNY 7.4689 · EUR/USD 1.1193",
+    "source": "欧洲中央银行",
+    "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "tag": "汇率",
+    "module": "碳价外部影响因素",
+    "naturalKey": "44291144b8baa16797fb9a1f0b2c208d",
+    "contentHash": "b1ad330cb064bdb626b7e109d47de401d1c37bcf7b0e8699553eb0a710a3ad77",
+    "publisher": "欧洲中央银行",
+    "publishedAt": "2026-11-09",
+    "fetchedAt": "2026-11-10 03:57",
+    "parserVersion": "2026.08.21-v3",
+    "verificationStatus": "自动核验",
+    "firstSeenAt": "2026-11-10 03:57",
+    "lastSeenAt": "2026-11-10 03:57"
+  },
+  {
     "date": "11-06",
     "title": "全国CEA日行情",
     "value": "94.40元/吨 · 250.82万吨",
@@ -447,7 +537,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-11-07 00:52",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "11-06",
@@ -465,7 +555,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-11-07 00:52",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "11-05",
@@ -843,7 +933,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-30 00:18",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-29",
@@ -861,7 +951,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-11-05 01:43",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-28",
@@ -897,7 +987,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-29 00:11",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-28",
@@ -915,7 +1005,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-29 00:11",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-28",
@@ -951,7 +1041,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-29 00:11",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-28",
@@ -969,7 +1059,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-29 00:11",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-27",
@@ -1041,7 +1131,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-27 23:29",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-26",
@@ -1095,7 +1185,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-24",
@@ -1113,7 +1203,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-24",
@@ -1131,7 +1221,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-25 21:49",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-23",
@@ -1257,7 +1347,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-23 22:20",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-23",
@@ -1599,7 +1689,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-20 00:45",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-19",
@@ -1671,7 +1761,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -1689,7 +1779,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -1707,7 +1797,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -1725,7 +1815,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -1743,7 +1833,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -1779,7 +1869,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-16 22:06",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-16",
@@ -2031,7 +2121,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-10 23:30",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-10",
@@ -2049,7 +2139,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-10 23:30",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-10",
@@ -2067,7 +2157,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-10 23:30",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-10",
@@ -2085,7 +2175,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-10-10 23:30",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "10-09",
@@ -2625,7 +2715,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-23 22:19",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-23",
@@ -2643,7 +2733,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-23 22:19",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-23",
@@ -2823,7 +2913,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-21 23:59",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-20",
@@ -2841,7 +2931,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-21 23:59",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-20",
@@ -3201,7 +3291,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-11 21:42",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-10",
@@ -3237,7 +3327,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-11 21:42",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-09",
@@ -3615,7 +3705,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-03 21:44",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-03",
@@ -3633,7 +3723,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-03 21:44",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "09-03",
@@ -4731,7 +4821,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "07-24",
@@ -4785,7 +4875,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "07-14",
@@ -4803,7 +4893,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "06-26",
@@ -4929,7 +5019,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-08-21 17:36",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "01-07",
@@ -4947,7 +5037,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "自动核验",
     "firstSeenAt": "2026-09-15 22:24",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "01-01",
@@ -5001,7 +5091,7 @@
     "parserVersion": "2026.08.21-v3",
     "verificationStatus": "来源已核验·发布时间待补",
     "firstSeenAt": "2026-08-25 18:00",
-    "lastSeenAt": "2026-11-09 00:08"
+    "lastSeenAt": "2026-11-10 03:57"
   },
   {
     "date": "—",
