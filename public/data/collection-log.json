@@ -1,5 +1,20 @@
 [
   {
+    "generatedAt": "2026-11-15T16:30:03.715Z",
+    "beijingTime": "2026-11-16 00:30",
+    "status": "partial",
+    "moduleCount": 9,
+    "publicModuleCount": 8,
+    "protectedModuleCount": 1,
+    "sourceChecks": 15,
+    "successCount": 14,
+    "failedCount": 1,
+    "addedCount": 0,
+    "updatedCount": 1,
+    "manualReviewCount": 1,
+    "totalRecordCount": 310
+  },
+  {
     "generatedAt": "2026-11-14T15:55:57.203Z",
     "beijingTime": "2026-11-14 23:56",
     "status": "complete",
@@ -883,20 +898,5 @@
     "updatedCount": 1,
     "manualReviewCount": 1,
     "totalRecordCount": 136
-  },
-  {
-    "generatedAt": "2026-09-16T14:16:52.263Z",
-    "beijingTime": "2026-09-16 22:16",
-    "status": "partial",
-    "moduleCount": 9,
-    "publicModuleCount": 8,
-    "protectedModuleCount": 1,
-    "sourceChecks": 15,
-    "successCount": 14,
-    "failedCount": 1,
-    "addedCount": 3,
-    "updatedCount": 1,
-    "manualReviewCount": 1,
-    "totalRecordCount": 133
   }
 ]
